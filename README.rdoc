@@ -7,11 +7,18 @@ Things you may want to cover:
 
 * Ruby version
 
+Ruby version should be 2.2, matching the AWS ElasticBeanstalk version (2.2 with Puma)
+
 * System dependencies
+
+- PostgreSQL
+- PostGIS
 
 * Configuration
 
 * Database creation
+
+bundle exec rake db:create
 
 * Database initialization
 
