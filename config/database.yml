@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: mapping_lighting_production
-  username: mapping_lighting
+  database: <%= ENV['MAPPING_LIGHTING_DATABASE_NAME'] %>
+  username:  <%= ENV['MAPPING_LIGHTING_DATABASE_USERNAME'] %>
   password: <%= ENV['MAPPING_LIGHTING_DATABASE_PASSWORD'] %>
