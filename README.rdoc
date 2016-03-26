@@ -16,6 +16,17 @@ Ruby version should be 2.2, matching the AWS ElasticBeanstalk version (2.2 with 
 
 * Configuration
 
+Development database credentials can be overridden with environment variables.
+
+In your `.env` file put the following lines to configure the connection, set the values appropriately for your system.
+The `.env` file is **no** committed to source control.
+
+```
+export MAPPING_LIGHTING_DATABASE_HOSTNAME=localhost
+export MAPPING_LIGHTING_DATABASE_USERNAME=postgres
+export MAPPING_LIGHTING_DATABASE_PASSWORD=
+```
+
 * Database creation
 
 bundle exec rake db:create

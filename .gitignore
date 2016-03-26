@@ -13,5 +13,8 @@
 /tmp
 *.swp
 
+# Ignore environment configuration files.
+.env
+
 # Ignore IntelliJ IDE files
 .idea/

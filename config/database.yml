@@ -24,6 +24,9 @@ default: &default
 development:
   <<: *default
   database: mapping_lighting_development
+  host: <%= ENV['MAPPING_LIGHTING_DATABASE_HOSTNAME'] %>
+  username: <%= ENV['MAPPING_LIGHTING_DATABASE_USERNAME'] %>
+  password: <%= ENV['MAPPING_LIGHTING_DATABASE_PASSWORD'] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
