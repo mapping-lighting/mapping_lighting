@@ -20,6 +20,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use event sourcing for observations.
 gem 'event_sourced_record'
+gem 'paperclip'
 
 # Use postGIS for geo data
 gem 'activerecord-postgis-adapter'
