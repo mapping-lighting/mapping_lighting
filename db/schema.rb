@@ -11,10 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160326041632) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "postgis"
+
+  create_table "observations", force: :cascade do |t|
+    t.string    "hashid"
+    t.datetime  "observed_at"
+    t.geography "recorder_location", limit: {:srid=>4326, :type=>"point", :geographic=>true}
+    t.json      "image_exif"
+    t.text      "note"
+    t.string    "email"
+    t.string    "name"
+    t.string    "session_id"
+    t.datetime  "created_at",                                                                 null: false
+    t.datetime  "updated_at",                                                                 null: false
+  end
 
 end
