@@ -45,6 +45,10 @@ gem 'puma'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  # Pry as default console and or to open the execution and debug.
+  gem 'pry'
+  # Development only hard-reset of the database migrations
+  gem 'app_reset'
 end
 
 group :development do

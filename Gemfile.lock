@@ -41,6 +41,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    app_reset (0.0.10)
+      rails
     arel (6.0.3)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -50,6 +52,7 @@ GEM
       activesupport (>= 3.0)
     cocaine (0.5.7)
       climate_control (>= 0.0.3, < 1.0)
+    coderay (1.1.0)
     concurrent-ruby (1.0.1)
     debug_inspector (0.0.2)
     dotenv (2.1.0)
@@ -76,6 +79,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    method_source (0.8.2)
     mime-types (2.99.1)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
@@ -88,6 +92,10 @@ GEM
       cocaine (>= 0.0.2)
       mime-types
     pg (0.18.4)
+    pry (0.10.1)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
     puma (3.2.0)
     rack (1.6.4)
     rack-test (0.6.3)
@@ -138,6 +146,7 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    slop (3.6.0)
     spring (1.6.4)
     sprockets (3.5.2)
       concurrent-ruby (~> 1.0)
@@ -164,6 +173,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-postgis-adapter
+  app_reset
   byebug
   dotenv-rails
   event_sourced_record
@@ -171,6 +181,7 @@ DEPENDENCIES
   jquery-rails
   paperclip
   pg (~> 0.15)
+  pry
   puma
   rails (= 4.2.6)
   rails_12factor
