@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Hashid:</strong>
+  <%= @observation.hashid %>
+</p>
+
+<p>
+  <strong>Observed at:</strong>
+  <%= @observation.observed_at %>
+</p>
+
+<p>
+  <strong>Recorder location:</strong>
+  <%= @observation.recorder_location %>
+</p>
+
+<p>
+  <strong>Image exif:</strong>
+  <%= @observation.image_exif %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @observation.note %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @observation.email %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @observation.name %>
+</p>
+
+<p>
+  <strong>Session:</strong>
+  <%= @observation.session_id %>
+</p>
+
+<%= link_to 'Edit', edit_observation_path(@observation) %> |
+<%= link_to 'Back', observations_path %>
