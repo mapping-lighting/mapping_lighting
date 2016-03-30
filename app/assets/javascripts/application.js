@@ -12,4 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require trackingjs/tracking
+//= require exif/exif
 //= require_tree .

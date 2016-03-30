@@ -4,6 +4,7 @@ class CreateObservations < ActiveRecord::Migration
       t.string :hashid
       t.timestamp :observed_at
       t.st_point :recorder_location, geographic: true
+      t.json :recorder_location_data
       t.json :image_exif
       t.text :note
       t.string :email

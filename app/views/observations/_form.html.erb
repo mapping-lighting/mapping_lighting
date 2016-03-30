@@ -12,6 +12,14 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :attachment %><br>
+    <%= f.file_field :attachment, accept: 'image/*' %>
+  </div>
+
+  <div id="map" style="height:300px;"></div>
+
+
+  <div class="field">
     <%= f.label :hashid %><br>
     <%= f.text_field :hashid %>
   </div>
@@ -22,6 +30,10 @@
   <div class="field">
     <%= f.label :recorder_location %><br>
     <%= f.text_field :recorder_location %>
+  </div>
+  <div class="field">
+    <%= f.label :recorder_location_data %><br>
+    <%= f.text_field :recorder_location_data %>
   </div>
   <div class="field">
     <%= f.label :image_exif %><br>
