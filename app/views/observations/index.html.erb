@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<div id="map" style="height:300px;"></div>
+
+
 <h1>Listing Observations</h1>
 
 <table>
@@ -8,6 +11,7 @@
       <th>Hashid</th>
       <th>Observed at</th>
       <th>Recorder location</th>
+      <th>Recorder location data</th>
       <th>Image exif</th>
       <th>Note</th>
       <th>Email</th>
@@ -23,7 +27,8 @@
         <td><%= observation.hashid %></td>
         <td><%= observation.observed_at %></td>
         <td><%= observation.recorder_location %></td>
-        <td><%= observation.image_exif %></td>
+        <td><%= observation.recorder_location_data %></td>
+        <td><%= truncate(observation.image_exif.to_s) %></td>
         <td><%= observation.note %></td>
         <td><%= observation.email %></td>
         <td><%= observation.name %></td>
@@ -37,5 +42,9 @@
 </table>
 
 <br>
+
+<script type="text/javascript">
+  var coords_set = <%=  @observations.select{|o| o.recorder_location_data.present? }.map { |o| [ o.recorder_location_data['latitude'],o.recorder_location_data['longitude']] } %>;
+</script>
 
 <%= link_to 'New Observation', new_observation_path %>
