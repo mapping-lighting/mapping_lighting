@@ -7,8 +7,9 @@ var map;
 var setExifData = function setExifData(newData) {
   document.getElementById("observation_image_exif").value = JSON.stringify(newData);
 };
+
 function initMap(){
-  map = L.map('map').setView([-36.80345394478311, 145.1612821511571], 13);
+  map = L.map('map').setView([-37.8221645, 145.0382583], 13);
   L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
