@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :lighting_type %><br>
-    <%= select_tag(:lighting_type, options_for_select([['Street lamp',1], ['Bus stop',2], ['Retail/Industry',3], ['Carpark',4], ['Advertising/Other', 5]], 1)) %>
+    <%= select_tag(:lighting_type, options_for_select([['Street lamp', 'street'], ['Bus stop','bus'], ['Retail/Industry', 'retail_industry'], ['Car park', 'car_park'], ['Advertising - General', 'advertising_general'], ['Other', 'other']], 'bus')) %>
   </div>
   <div class="field">
     <%= f.label :recorder_location %><br>
