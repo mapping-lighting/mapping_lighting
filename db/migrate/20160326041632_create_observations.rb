@@ -3,6 +3,7 @@ class CreateObservations < ActiveRecord::Migration
     create_table :observations do |t|
       t.string :hashid
       t.timestamp :observed_at
+      t.string :lighting_type
       t.st_point :recorder_location, geographic: true
       t.json :recorder_location_data
       t.json :image_exif

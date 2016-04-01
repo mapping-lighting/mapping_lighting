@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20160326041632) do
   create_table "observations", force: :cascade do |t|
     t.string    "hashid"
     t.datetime  "observed_at"
+    t.string    "lighting_type"
     t.geography "recorder_location",      limit: {:srid=>4326, :type=>"point", :geographic=>true}
     t.json      "recorder_location_data"
     t.json      "image_exif"
