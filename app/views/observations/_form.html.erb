@@ -28,6 +28,10 @@
     <%= f.datetime_select :observed_at %>
   </div>
   <div class="field">
+    <%= f.label :lighting_type %><br>
+    <%= select_tag(:lighting_type, options_for_select([['Street lamp',1], ['Bus stop',2], ['Retail/Industry',3], ['Carpark',4], ['Advertising/Other', 5]], 1)) %>
+  </div>
+  <div class="field">
     <%= f.label :recorder_location %><br>
     <%= f.text_field :recorder_location %>
   </div>
