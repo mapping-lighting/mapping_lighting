@@ -22,25 +22,6 @@
   #map {
     margin-bottom: 20px;
   }
-  h1 {
-    float: left;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  a.button {
-    font: 16px Arial, Helvetica, sans-serif;
-    float: right;
-    background-color: #F8F8F8;
-    padding: 10px 30px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    text-decoration: none;
-    border-radius: 10px 10px;
-    -webkit-border-radius: 10px 10px;
-    -moz-border-radius: 10px 10px;
-  }
-  a.button:hover {
-    color: #2A88AD;
-  }
   label {
       display: block;
       font: 14px Arial, Helvetica, sans-serif;
@@ -51,22 +32,7 @@
     background-color: red;
    overflow: hidden;
   }
-  .obs-form-title {
-    font: 30px Arial, Helvetica, sans-serif;
-    overflow: hidden;
-    background: #2A88AD;
-    padding: 20px 30px 15px 30px;
-    margin: -30px -30px 30px -30px;
-    border-radius: 10px 10px 0 0;
-    -webkit-border-radius: 10px 10px 0 0;
-    -moz-border-radius: 10px 10px 0 0;
-    color: #fff;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
-    -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-    -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-    box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-    border: 1px solid #257C9E;
-  }
+
   input[type="text"], input[type="email"], input[type="datetime"], select {
     display: inline-block;
     height: 40px;
@@ -123,19 +89,12 @@
     -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
     box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
   }
-  .obs-test {
-    display: inline-block;
-    float: left;
-    width: 100%;
-  }
-
   .inner-wrap{
       padding: 30px;
       background: #F8F8F8;
       border-radius: 6px;
       margin-bottom: 15px;
   }
-
   .obs-form-group {
     display: inline-block;
     width: 100%;
@@ -181,9 +140,55 @@
   background-color: blue;
 }
 
+.obs-form-title {
+  font: 30px Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  background: #2A88AD;
+  padding: 20px 30px 15px 30px;
+  margin: -30px -30px 30px -30px;
+  border-radius: 10px 10px 0 0;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+  -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+  box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+  border: 1px solid #257C9E;
+}
 
+.title {
+  display: inline-block;
+  width: 100%;
+  margin-top: 0px;
+  font: 30px Arial, Helvetica, sans-serif;
+  background: #2A88AD;
+  padding: 10px 30px 15px 30px;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+  -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+  box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+  border: 1px solid #257C9E;
+}
 
-
-
-
-
+a.button {
+  font: 16px Arial, Helvetica, sans-serif;
+  float: right;
+  background-color: #F8F8F8;
+  padding: 10px 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  border-radius: 10px 10px;
+  -webkit-border-radius: 10px 10px;
+  -moz-border-radius: 10px 10px;
+}
+a.button:hover {
+  color: #FFF;
+  background-color: #98b8c5;
+}
+h1 {
+  float: left;
+  font-family: Arial, Helvetica, sans-serif;
+}
