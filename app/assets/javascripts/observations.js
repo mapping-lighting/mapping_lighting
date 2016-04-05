@@ -73,7 +73,6 @@ $(document).ready(function(){
 
   initMarkers();
 
-
   document.getElementById("observation_attachment").onchange = function(e) {
       getLocation();
       if (e.target.files[0]) {
@@ -88,10 +87,4 @@ $(document).ready(function(){
         console.log('No file selected');
       }
   };
-});
-
-$(function() {
-  $('#datetimepicker').datetimepicker({
-    locale: 'en-au'
-  });
 });
