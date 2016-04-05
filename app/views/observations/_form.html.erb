@@ -10,54 +10,69 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :attachment %><br>
+  <div class='obs-form-title'>
+    <h1>New Observation</h1>
+    <%= link_to 'Back', observations_path, class: 'button' %>
+  </div>
+  <div id="map" style="height:300px;"></div>
+  <div class="obs-form-heading"><span class='title-span'>1.</span>Choose a file</div>
+  <div class="obs-form-group">
+    <%= f.label :file, class: 'input-label' %>
     <%= f.file_field :attachment, accept: 'image/*' %>
   </div>
+  <div class="obs-form-heading"><span class='title-span'>2</span>Enter   observation details</div>
+  <div class="obs-form-group">
+    <div class='inner-group-wrap'
+      <div class='field'>
+        <%= f.label :hashid, class: 'input-label' %>
+        <%= f.text_field :hashid %>
+      </div>
+  <div class="row">
+    <div class='form-group'>
+      <%= f.label :observed_at, class: 'input-label' %>
+      <div class="input-group date" class: 'form-control' id='datetimepicker'>
+      <!-- <%= f.datetime_field :observed_at, class: 'form-control', id: 'obs-date-field' %> -->
+        <%= f.datetime_field :observed_at%>
+        <span class="input-group-addon">
+          <span class="glyphicon glyphicon-calendar"></span>
+        </span>
+      </div>
+    </div>
+  </div>
+    </div>
+    <div class="field">
+      <%= f.label :lighting_type, class: 'input-label' %><br>
+      <%= select_tag(:lighting_type, options_for_select([['Street lamp', 'street'], ['Bus stop','bus'], ['Retail/Industry', 'retail_industry'], ['Car park', 'car_park'], ['Advertising - General', 'advertising_general'], ['Other', 'other']], 'street')) %>
+    </div>
+    <div class="field">
+      <%= f.label :recorder_location, class: 'input-label' %><br>
+      <%= f.text_field :recorder_location %>
+    </div>
+    <div class="field">
+      <%= f.label :recorder_location_data, class: 'input-label' %><br>
+      <%= f.text_field :recorder_location_data %>
+    </div>
+    <div class="field-hidden">
+      <%= f.label :image_exif %><br>
+      <%= f.text_field :image_exif %>
+    </div>
 
-  <div id="map" style="height:300px;"></div>
-
-
-  <div class="field">
-    <%= f.label :hashid %><br>
-    <%= f.text_field :hashid %>
-  </div>
-  <div class="field">
-    <%= f.label :observed_at %><br>
-    <%= f.datetime_select :observed_at %>
-  </div>
-  <div class="field">
-    <%= f.label :lighting_type %><br>
-    <%= select_tag(:lighting_type, options_for_select([['Street lamp', 'street'], ['Bus stop','bus'], ['Retail/Industry', 'retail_industry'], ['Car park', 'car_park'], ['Advertising - General', 'advertising_general'], ['Other', 'other']], 'street')) %>
-  </div>
-  <div class="field">
-    <%= f.label :recorder_location %><br>
-    <%= f.text_field :recorder_location %>
-  </div>
-  <div class="field">
-    <%= f.label :recorder_location_data %><br>
-    <%= f.text_field :recorder_location_data %>
-  </div>
-  <div class="field">
-    <%= f.label :image_exif %><br>
-    <%= f.text_field :image_exif %>
-  </div>
-  <div class="field">
-    <%= f.label :note %><br>
-    <%= f.text_area :note %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :session_id %><br>
-    <%= f.text_field :session_id %>
+    <div class="field">
+      <%= f.label :note %><br>
+      <%= f.text_area :note %>
+    </div>
+    <div class="field">
+      <%= f.label :email %><br>
+      <%= f.text_field :email %>
+    </div>
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field-hidden">
+      <%= f.label :session_id %><br>
+      <%= f.text_field :session_id %>
+    </div>
   </div>
   <div class="actions">
     <%= f.submit %>

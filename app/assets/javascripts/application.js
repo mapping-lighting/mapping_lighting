@@ -15,3 +15,6 @@
 //= require trackingjs/tracking
 //= require exif/exif
 //= require_tree .
+//= require moment
+//= require moment/en-au
+//= require bootstrap-datetimepicker
