@@ -88,8 +88,10 @@ $(document).ready(function(){
         console.log('No file selected');
       }
   };
+});
 
-
-
-
+$(function() {
+  $('#datetimepicker').datetimepicker({
+    locale: 'en-au'
+  });
 });

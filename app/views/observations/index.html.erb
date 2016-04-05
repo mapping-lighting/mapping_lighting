@@ -10,9 +10,8 @@
     <tr>
       <th>Hashid</th>
       <th>Observed at</th>
+      <th>Lighting type</th>
       <th>Recorder location</th>
-      <th>Recorder location data</th>
-      <th>Image exif</th>
       <th>Note</th>
       <th>Email</th>
       <th>Name</th>
@@ -26,15 +25,13 @@
       <tr>
         <td><%= observation.hashid %></td>
         <td><%= observation.observed_at %></td>
+        <td><%= observation.lighting_type %></td>
         <td><%= observation.recorder_location %></td>
-        <td><%= observation.recorder_location_data %></td>
-        <td><%= truncate(observation.image_exif.to_s) %></td>
         <td><%= observation.note %></td>
         <td><%= observation.email %></td>
         <td><%= observation.name %></td>
         <td><%= observation.session_id %></td>
         <td><%= link_to 'Show', observation %></td>
-        <td><%= link_to 'Edit', edit_observation_path(observation) %></td>
         <td><%= link_to 'Destroy', observation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
