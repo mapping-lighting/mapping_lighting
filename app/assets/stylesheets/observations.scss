@@ -5,8 +5,10 @@
 @import "bootstrap";
 @import "bootstrap-datetimepicker";
 
+
 // Form styling
 .new_observation {
+  font: Arial, Helvetica, sans-serif;
   width: 80%;
   padding:30px;
   margin:40px auto;
@@ -41,7 +43,7 @@
   }
   label {
       display: block;
-      font: 13px Arial, Helvetica, sans-serif;
+      font: 14px Arial, Helvetica, sans-serif;
       color: #888;
       margin-bottom: 5px;
   }
@@ -50,6 +52,7 @@
    overflow: hidden;
   }
   .obs-form-title {
+    font: 30px Arial, Helvetica, sans-serif;
     overflow: hidden;
     background: #2A88AD;
     padding: 20px 30px 15px 30px;
@@ -59,7 +62,6 @@
     -moz-border-radius: 10px 10px 0 0;
     color: #fff;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
-    font: normal 30px 'Bitter', serif;
     -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
     -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
     box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
@@ -72,8 +74,6 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     width: 100%;
-    margin: 4px;
-    padding: 2px;
     border-radius: 6px;
     -webkit-border-radius:6px;
     -moz-border-radius:6px;
@@ -111,7 +111,6 @@
     -moz-border-radius: 5px;
     color: #fff;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
-    font: normal 30px 'Bitter', serif;
     -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
     -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
     box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
@@ -146,7 +145,7 @@
     margin-bottom: 15px;
   }
   .obs-form-heading {
-    font: normal 20px serif;
+    font: 20px serif;
     color: #2A88AD;
     margin-bottom: 5px;
     .title-span {
@@ -174,9 +173,15 @@
   }
 }
 
+.field {
+  padding: 2px 2px 20px 2px;
+  margin: 4px;
+}
 .file-input {
   background-color: blue;
 }
+
+
 
 
 
