@@ -55,6 +55,11 @@ GEM
       momentjs-rails (>= 2.8.1)
     builder (3.2.2)
     byebug (8.2.2)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.7)
@@ -88,6 +93,7 @@ GEM
       mime-types (>= 1.16, < 3)
     method_source (0.8.2)
     mime-types (2.99.1)
+    mini_magick (4.5.1)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     momentjs-rails (2.11.0)
@@ -185,10 +191,12 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.6)
   bootstrap3-datetimepicker-rails (~> 4.17.37)
   byebug
+  carrierwave (~> 0.10.0)
   dotenv-rails
   event_sourced_record
   jbuilder (~> 2.0)
   jquery-rails
+  mini_magick (~> 4.3)
   momentjs-rails (>= 2.9.0)
   paperclip
   pg (~> 0.15)
