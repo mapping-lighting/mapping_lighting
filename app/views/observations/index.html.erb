@@ -12,6 +12,7 @@
       <thead>
         <tr>
           <th>Observed at</th>
+          <th>File</th>
           <th>Lighting type</th>
           <th>Recorder location</th>
           <th>Note</th>
@@ -25,6 +26,7 @@
         <% @observations.each do |observation| %>
           <tr>
             <td><%= observation.observed_at %></td>
+            <td><%= image_tag observation.attachment.thumb.url %></td>
             <td><%= observation.lighting_type %></td>
             <td><%= observation.recorder_location %></td>
             <td><%= observation.note %></td>
