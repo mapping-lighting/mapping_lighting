@@ -7,7 +7,13 @@ gem 'rails', '4.2.6'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
+gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
+
+# Use bootstrap for the date-picker on form
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.37'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use jquery as the JavaScript library
@@ -25,6 +31,10 @@ gem 'paperclip'
 
 # Use postGIS for geo data
 gem 'activerecord-postgis-adapter'
+
+# Use carrierwave for image uploading
+gem 'carrierwave', '~> 0.10.0'
+gem 'mini_magick', '~> 4.3'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -45,6 +55,10 @@ gem 'puma'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  # Pry as default console and or to open the execution and debug.
+  gem 'pry'
+  # Development only hard-reset of the database migrations
+  gem 'app_reset'
 end
 
 group :development do

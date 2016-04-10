@@ -1,0 +1,215 @@
+// Place all the styles related to the observations controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'bootstrap-sprockets';
+@import "bootstrap";
+@import "bootstrap-datetimepicker";
+
+$font-sans-serif: 'Open Sans', 'Helvetica', Arial, sans-serif;
+$font-sans-serif-simple: 'Helvetica', Arial, sans-serif;
+$font-serif: 'Georgia', 'Times New Roman', Helvetica, Arial, sans-serif;
+
+$primary-background-color: #FFF ;
+$primary-contrast-color: #2A88AD ;
+$btn-color: #F8F8F8;
+$btn-color-hover: #2A6881;
+$border-color: #257C9E;
+$label-color: #888;
+
+
+
+// Form styling
+.new_observation {
+  font: $font-sans-serif;
+  width: 80%;
+  padding:30px;
+  margin:40px auto;
+  background: $primary-background-color;
+  border-radius: 10px;
+  -webkit-border-radius:10px;
+  -moz-border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.13);
+  -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.13);
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.13);
+  #map {
+    margin-bottom: 20px;
+  }
+  label {
+      display: block;
+      font: $font-sans-serif;
+      font-size: 14px;
+      color: $label-color;
+      margin-bottom: 5px;
+  }
+  // .inner-group-wrap{
+  //   background-color: red;
+  //  overflow: hidden;
+  // }
+
+  input[type="text"], input[type="email"], input[type="datetime"], select {
+    display: inline-block;
+    height: 40px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    border-radius: 6px;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border: 2px solid $primary-background-color;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+    -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+    -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+    &:focus {
+      outline: none;
+      box-shadow: 0px 0px 1px 1px #2A88AD;
+      -moz-box-shadow: 0px 0px 1px 1px #2A88AD;
+      -webkit-box-shadow: 0px 0px 1px 1px #2A88AD;
+    }
+  }
+  input[type="submit"]:focus {
+    outline: none;
+  }
+  textarea {
+    width: 100%;
+    height: 60px;
+    margin: 4px;
+    padding: 2px;
+    border-radius: 6px;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    &:focus {
+      outline: none;
+      box-shadow: 0px 0px 1px 1px #2A88AD;
+      -moz-box-shadow: 0px 0px 1px 1px #2A88AD;
+      -webkit-box-shadow: 0px 0px 1px 1px #2A88AD;
+    }
+  }
+  input[type="submit"]{
+    background: #2A88AD;
+    padding: 8px 20px 8px 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    color: $primary-background-color;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    border: 1px solid $border-color;
+    font-size: 15px;
+  }
+  input[type="submit"]:hover{
+    background: #2A6881;
+    -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+    -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+    box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+  }
+  .inner-wrap{
+      padding: 30px;
+      background: #F8F8F8;
+      border-radius: 6px;
+      margin-bottom: 15px;
+  }
+  .obs-form-group {
+    display: inline-block;
+    width: 100%;
+    padding: 30px;
+    background: #F8F8F8;
+    border-radius: 6px;
+    margin-bottom: 15px;
+  }
+  .obs-form-heading {
+    font-size: 20px;
+    font: $font-serif;
+    color: $primary-contrast-color;
+    margin-bottom: 5px;
+    .title-span {
+      background: $primary-contrast-color;
+      padding: 5px 10px 5px 10px;
+      position: absolute;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border: 4px solid $primary-background-color;
+      font-size: 14px;
+      margin-left: -45px;
+      color: $primary-background-color;
+      margin-top: -3px;
+    }
+  }
+  input[type="file"]:focus {
+    outline: none;
+  }
+  .field-hidden {
+    display: none;
+  }
+  row {
+    margin: 0 0 0 0;
+  }
+}
+
+.field {
+  padding: 2px 2px 20px 2px;
+  margin: 4px;
+}
+.file-input {
+  background-color: blue;
+}
+
+.obs-form-title {
+  font-size: 30px;
+  font: $font-sans-serif;
+  overflow: hidden;
+  background: $primary-contrast-color;
+  padding: 20px 30px 15px 30px;
+  margin: -30px -30px 30px -30px;
+  border-radius: 10px 10px 0 0;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  color: $primary-background-color;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+  -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+  box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+  border: 1px solid $border-color;
+}
+
+.title {
+  display: inline-block;
+  width: 100%;
+  margin-top: 0px;
+  font-size: 30px;
+  font: $font-sans-serif;
+  background: $primary-contrast-color;
+  padding: 10px 30px 15px 30px;
+  color: $primary-background-color;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+  -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+  box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+  border: 1px solid $border-color;
+}
+
+a.button {
+  font-size: 16px;
+  font: $font-sans-serif;
+  float: right;
+  background-color: $btn-color;
+  padding: 10px 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  border-radius: 10px 10px;
+  -webkit-border-radius: 10px 10px;
+  -moz-border-radius: 10px 10px;
+}
+a.button:hover, a.button:focus {
+  color: $primary-background-color;
+  background-color: $btn-color-hover;
+  outline: none;
+}
+h1 {
+  float: left;
+  font-family: Arial, Helvetica, sans-serif;
+}
