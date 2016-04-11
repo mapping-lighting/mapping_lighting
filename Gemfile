@@ -31,6 +31,8 @@ gem 'paperclip'
 
 # Use postGIS for geo data
 gem 'activerecord-postgis-adapter'
+# Leaflet JS Mapping Library
+gem 'leaflet-rails'
 
 # Use carrierwave for image uploading
 gem 'carrierwave', '~> 0.10.0'
