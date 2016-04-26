@@ -1,0 +1,19 @@
+<div class='container'>
+  <p id="notice"><%= notice %></p>
+  <div class='title'>
+    <h1>Welcome to the Mapping Lighting Project</h1>
+  </div>
+    <h3>Centre of Astrophysics and Supercomputing</h3>
+    <ul class="nav nav-tabs">
+      <li role="presentation" class="active">
+        <%= link_to 'Home', root_path, class: 'button' %>
+      </li>
+      <li role="presentation">
+        <%= link_to 'New Observation', new_observation_path, class: 'button' %>
+      </li>
+      <li role="presentation">
+        <%= link_to 'All observations', observations_path, class: 'button' %>
+      </li>
+    </ul>
+</div>
+

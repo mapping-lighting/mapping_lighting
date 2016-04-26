@@ -1,23 +1,36 @@
 <div class='container new_observation'>
 
   <div class='obs-form-title'>
-    <h1>New Observation created:</h1>
-    <%= link_to 'Back', observations_path, class: 'button' %>
+    <h1>Current observation details</h1>
   </div>
-  <p id="notice"><%= notice %></p>
-  <p>Created at: <%= @observation.observed_at %></p>
   <!-- <p class='obs-form-title'>
     <strong>New observation created:</strong>
     <%= @observation.observed_at %>
     <%= link_to 'Back', observations_path, class: 'button' %>
   </p> -->
+<ul class="nav nav-tabs">
+      <li role="presentation">
+        <%= link_to 'Home', root_path, class: 'button' %>
+      </li>
+      <li role="presentation">
+        <%= link_to 'New Observation', new_observation_path, class: 'button' %>
+      </li>
+      <li role="presentation">
+        <%= link_to 'All observations', observations_path, class: 'button' %>
+      </li>
+    </ul>
   <span class='right'>
     <caption>Your observation</caption>
     <p>
       <%= image_tag @observation.attachment.resized.url %>
     </p>
+    <p>
+     <div id="map" style="height:300px;"></div>
+    </p>
   </span>
   <span class='left'>
+    <p id="notice"><%= notice %></p>
+    <p>Created at: <%= @observation.observed_at %></p>
     <p>You have submitted the following observation:</p>
     <p>
       <strong>Lighting type:</strong>
