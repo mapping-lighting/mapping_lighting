@@ -38,9 +38,9 @@ gem 'leaflet-rails'
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 4.3'
 
-# Use carrierwave for image uploading
-gem 'carrierwave', '~> 0.10.0'
-gem 'mini_magick', '~> 4.3'
+# Use devise for authentication
+gem 'devise'
+gem 'coffee-script'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
