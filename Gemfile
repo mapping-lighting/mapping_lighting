@@ -31,6 +31,12 @@ gem 'paperclip'
 
 # Use postGIS for geo data
 gem 'activerecord-postgis-adapter'
+# Leaflet JS Mapping Library
+gem 'leaflet-rails'
+
+# Use carrierwave for image uploading
+gem 'carrierwave', '~> 0.10.0'
+gem 'mini_magick', '~> 4.3'
 
 # Use carrierwave for image uploading
 gem 'carrierwave', '~> 0.10.0'
@@ -50,6 +56,7 @@ gem 'dotenv-rails', :groups => [:development, :test]
 
 # Heroku Suggest rails12factor
 gem 'rails_12factor'
+gem 'puma'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
