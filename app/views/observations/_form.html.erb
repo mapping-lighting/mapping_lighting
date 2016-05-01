@@ -37,6 +37,10 @@
       <%= f.label :name %>
       <%= f.text_field :name %>
     </div>
+    <div class="field">
+      <%= f.label :I_provide_my_consent_for_this_image_to_be_used_as_part_of_this_study %>
+      <%= f.check_box :permission_given, :required => true %>
+    </div>
   </div>
   <div class="field-hidden">
     <%= f.label :observed_at %>

@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20160326041632) do
     t.text      "note"
     t.string    "email"
     t.string    "name"
+    t.boolean   "permission_given"
     t.string    "session_id"
     t.datetime  "created_at",                                                                      null: false
     t.datetime  "updated_at",                                                                      null: false
