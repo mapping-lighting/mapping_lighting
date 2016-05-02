@@ -1,5 +1,6 @@
 class ObservationsController < ApplicationController
   before_action :set_observation, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :statistics]
 
   # GET /observations
   # GET /observations.json
@@ -59,6 +60,10 @@ class ObservationsController < ApplicationController
       format.html { redirect_to observations_url, notice: 'Observation was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def statistics
+    @observations = Observation.all
   end
 
   private
