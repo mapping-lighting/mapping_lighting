@@ -1,4 +1,4 @@
-<div class='container new_observation'>
+<div class='container-fluid new_observation'>
 
   <div class='obs-form-title'>
     <h1>Current observation details</h1>
@@ -8,17 +8,7 @@
     <%= @observation.observed_at %>
     <%= link_to 'Back', observations_path, class: 'button' %>
   </p> -->
-<ul class="nav nav-tabs">
-      <li role="presentation">
-        <%= link_to 'Home', root_path, class: 'button' %>
-      </li>
-      <li role="presentation">
-        <%= link_to 'New Observation', new_observation_path, class: 'button' %>
-      </li>
-      <li role="presentation">
-        <%= link_to 'All observations', observations_path, class: 'button' %>
-      </li>
-    </ul>
+  <%= render :partial => "nav"%>
   <span class='right'>
     <caption>Your observation</caption>
     <p>

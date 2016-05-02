@@ -2,7 +2,17 @@
 <p class="alert"><%= alert %></p>
 <div class='container new_observation'>
 
-  <div class='obs-form-title'>
-    <h1>Statistics page</h1>
-  </div>
+  <h3>Statistics</h3>
+  <ul class="nav nav-tabs">
+    <li role="presentation" class="active">
+      <%= link_to 'Home', root_path, class: 'button' %>
+    </li>
+    <li role="presentation">
+      <%= link_to 'New Observation', new_observation_path, class: 'button' %>
+    </li>
+    <li role="presentation">
+      <%= link_to 'All observations', observations_path, class: 'button' %>
+    </li>
+    <%= render :partial => "admin_nav" if user_signed_in? %>
+  </ul>
 </div>
