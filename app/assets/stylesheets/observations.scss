@@ -223,5 +223,29 @@ caption {
 @media (max-width: 800px) {
   .new_observation {
     width: 100%;
+    margin: 40px auto;
+    padding-top: 5px;
   }
+  .form-map {
+    display: none;
+  }
+}
+
+@media (max-width: 540px) {
+  a.button {
+    font-size: 12px;
+    background-color: $primary-contrast-color;
+    color:  $btn-color;
+    margin-top: 5px;
+    padding-left: 80px;
+    padding-top: 5px;
+  }
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: $primary-contrast-color;
+}
+
+.navbar.navbar-default {
+  margin-bottom: 0px;
 }
