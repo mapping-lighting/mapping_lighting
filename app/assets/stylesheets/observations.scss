@@ -16,8 +16,6 @@ $btn-color-hover: #2A6881;
 $border-color: #257C9E;
 $label-color: #888;
 
-
-
 // Form styling
 .new_observation {
   font: $font-sans-serif;
@@ -41,10 +39,6 @@ $label-color: #888;
       color: $label-color;
       margin-bottom: 5px;
   }
-  // .inner-group-wrap{
-  //   background-color: red;
-  //  overflow: hidden;
-  // }
 
   input[type="text"], input[type="email"], input[type="datetime"], select {
     display: inline-block;
@@ -224,4 +218,10 @@ h1 {
 
 caption {
   text-align: center;
+}
+
+@media (max-width: 800px) {
+  .new_observation {
+    width: 100%;
+  }
 }
