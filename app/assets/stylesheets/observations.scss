@@ -229,6 +229,9 @@ caption {
   .form-map {
     display: none;
   }
+  li.menu {
+    text-align: right;
+  }
 }
 
 @media (max-width: 540px) {
@@ -249,3 +252,5 @@ caption {
 .navbar.navbar-default {
   margin-bottom: 0px;
 }
+
+
