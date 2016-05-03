@@ -10,8 +10,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+<%= render :partial => "shared/nav"%>
+<div class="container-fluid">
+  <%= yield %>
+</div>
 
 </body>
 </html>
