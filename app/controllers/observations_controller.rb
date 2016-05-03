@@ -1,5 +1,6 @@
 class ObservationsController < ApplicationController
   before_action :set_observation, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:edit, :statistics]
 
   # GET /observations
   # GET /observations.json
@@ -61,6 +62,10 @@ class ObservationsController < ApplicationController
     end
   end
 
+  def statistics
+    @observations = Observation.all
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_observation
@@ -69,6 +74,6 @@ class ObservationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def observation_params
-      params.require(:observation).permit(:hashid, :observed_at, :attachment, :lighting_type, :recorder_location, :recorder_location_data, :image_exif, :note, :email, :name, :session_id)
+      params.require(:observation).permit(:hashid, :observed_at, :attachment, :lighting_type, :recorder_location, :recorder_location_data, :image_exif, :note, :email, :name, :permission_given, :session_id)
     end
 end

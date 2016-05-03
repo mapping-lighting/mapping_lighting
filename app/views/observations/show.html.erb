@@ -1,59 +1,48 @@
-<p id="notice"><%= notice %></p>
+<%= render :partial => "nav"%>
+<div class='container-fluid new_observation'>
 
-<p>
-  <strong>Hashid:</strong>
-  <%= @observation.hashid %>
-</p>
+  <div class='obs-form-title'>
+    <h1>Current observation details</h1>
+  </div>
+  <!-- <p class='obs-form-title'>
+    <strong>New observation created:</strong>
+    <%= @observation.observed_at %>
+    <%= link_to 'Back', observations_path, class: 'button' %>
+  </p> -->
+  <%= render :partial => "nav"%>
+  <span class='right'>
+    <caption>Your observation</caption>
+    <p>
+      <%= image_tag @observation.attachment.resized.url %>
+    </p>
+    <p>
+     <div id="map" style="height:300px;"></div>
+    </p>
+  </span>
+  <span class='left'>
+    <p id="notice"><%= notice %></p>
+    <p>Created at: <%= @observation.observed_at %></p>
+    <p>You have submitted the following observation:</p>
+    <p>
+      <strong>Lighting type:</strong>
+      <%= @observation.lighting_type %>
+    </p>
 
-<p>
-  <strong>Observed at:</strong>
-  <%= @observation.observed_at %>
-</p>
+    <p>
+      <strong>Note:</strong>
+      <%= @observation.note %>
+    </p>
 
-<p>
-  <strong>Image:</strong>
-  <%= image_tag @observation.attachment.thumb.url %>
-</p>
+    <p>
+      <strong>Email:</strong>
+      <%= @observation.email %>
+    </p>
 
-<p>
-  <strong>Lighting type:</strong>
-  <%= @observation.lighting_type %>
-</p>
-
-<p>
-  <strong>Recorder location:</strong>
-  <%= @observation.recorder_location %>
-</p>
-
-<p>
-  <strong>Recorder location Data:</strong>
-  <%= @observation.recorder_location_data %>
-</p>
-
-<p>
-  <strong>Image exif:</strong>
-  <%= @observation.image_exif %>
-</p>
-
-<p>
-  <strong>Note:</strong>
-  <%= @observation.note %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @observation.email %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @observation.name %>
-</p>
-
-<p>
-  <strong>Session:</strong>
-  <%= @observation.session_id %>
-</p>
-
-<%= link_to 'Edit', edit_observation_path(@observation) %> |
-<%= link_to 'Back', observations_path %>
+    <p>
+      <strong>Name:</strong>
+      <%= @observation.name %>
+    </p>
+    <br />
+    <p>Thank you for contributing to the Mapping Lighting project.</p>
+  </span>
+</div>

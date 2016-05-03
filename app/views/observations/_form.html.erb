@@ -11,9 +11,9 @@
   <% end %>
   <div class='obs-form-title'>
     <h1>New Observation</h1>
-    <%= link_to 'Back', observations_path, class: 'button' %>
+    <%= link_to 'Cancel', root_path, class: 'button' %>
   </div>
-  <div id="map" style="height:300px;"></div>
+  <div id="map" class="form-map" style="height:300px;"></div>
   <div class="obs-form-heading"><span class='title-span'>1</span>Upload a picture of your lighting observation</div>
   <div class="obs-form-group">
     <%= f.label :file, class: 'input-label' %>
@@ -37,27 +37,30 @@
       <%= f.label :name %>
       <%= f.text_field :name %>
     </div>
-  </div>
-  <div class="field-hidden">
-    <%= f.label :observed_at %>
-    <%= f.datetime_select :observed_at %>
-  </div>
-  <div class="field-hidden">
-    <%= f.label :recorder_location, class: 'input-label' %>
-    <%= f.text_field :recorder_location %>
-  </div>
-  <div class="field-hidden">
-    <%= f.label :recorder_location_data, class: 'input-label' %>
-    <%= f.text_field :recorder_location_data %>
-  </div>
-  <div class="field-hidden">
-    <%= f.label :image_exif %><br>
-    <%= f.text_field :image_exif %>
-  </div>
-  <div class="field-hidden">
-    <%= f.label :session_id %><br>
-    <%= f.text_field :session_id %>
-  </div>
+    <div class="field">
+      <%= f.label :I_provide_my_consent_for_this_image_to_be_used_as_part_of_this_study %>
+      <%= f.check_box :permission_given, :required => true %>
+    </div>
+    <div class="field-hidden">
+      <%= f.label :observed_at %>
+      <%= f.datetime_select :observed_at %>
+    </div>
+    <div class="field-hidden">
+      <%= f.label :recorder_location, class: 'input-label' %>
+      <%= f.text_field :recorder_location %>
+    </div>
+    <div class="field-hidden">
+      <%= f.label :recorder_location_data, class: 'input-label' %>
+      <%= f.text_field :recorder_location_data %>
+    </div>
+    <div class="field-hidden">
+      <%= f.label :image_exif %><br>
+      <%= f.text_field :image_exif %>
+    </div>
+    <div class="field-hidden">
+      <%= f.label :session_id %><br>
+      <%= f.text_field :session_id %>
+    </div>
   </div>
   <div class="obs-form-heading"><span class='title-span'>3</span>Create new observation</div>
   <div class="obs-form-group">

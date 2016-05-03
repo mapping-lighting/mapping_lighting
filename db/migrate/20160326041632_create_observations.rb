@@ -11,6 +11,7 @@ class CreateObservations < ActiveRecord::Migration
       t.text :note
       t.string :email
       t.string :name
+      t.boolean :permission_given
       t.string :session_id
 
       t.timestamps null: false

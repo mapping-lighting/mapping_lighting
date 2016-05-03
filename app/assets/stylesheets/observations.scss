@@ -16,8 +16,6 @@ $btn-color-hover: #2A6881;
 $border-color: #257C9E;
 $label-color: #888;
 
-
-
 // Form styling
 .new_observation {
   font: $font-sans-serif;
@@ -41,10 +39,6 @@ $label-color: #888;
       color: $label-color;
       margin-bottom: 5px;
   }
-  // .inner-group-wrap{
-  //   background-color: red;
-  //  overflow: hidden;
-  // }
 
   input[type="text"], input[type="email"], input[type="datetime"], select {
     display: inline-block;
@@ -212,4 +206,62 @@ a.button:hover, a.button:focus {
 h1 {
   float: left;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+caption {
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .new_observation {
+    width: 100%;
+    margin: 40px auto;
+    padding-top: 5px;
+  }
+  .form-map {
+    display: none;
+  }
+  li.menu {
+    text-align: right;
+  }
+}
+
+@media (max-width: 540px) {
+  a.button {
+    font-size: 12px;
+    background-color: $primary-contrast-color;
+    color:  $btn-color;
+    margin-top: 5px;
+    padding-left: 80px;
+    padding-top: 5px;
+  }
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: $primary-contrast-color;
+}
+
+.navbar.navbar-default {
+  margin-bottom: 0px;
+}
+
+.placeholder-image {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  font: $font-sans-serif;
+  background-color: #422828;
+  h2 {
+    color: white;
+    vertical-align: center;
+    padding: 50px;
+  }
 }
