@@ -25,8 +25,6 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-# Use event sourcing for observations.
-gem 'event_sourced_record'
 gem 'paperclip'
 
 # Use postGIS for geo data
