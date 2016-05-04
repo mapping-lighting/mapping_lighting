@@ -53,7 +53,10 @@ class ObservationsController < ApplicationController
   end
 
   def statistics
-    @observations = Observation.all
+    @observations = Observation
+  end
+  helper_method def lighting_type_stats
+                  @lighting_type_stats =  Observation.group(:lighting_type).count
   end
 
   private

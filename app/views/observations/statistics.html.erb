@@ -5,4 +5,15 @@
   <h3>Statistics</h3>
   <span>Number of images collected</span>
 
+  <table>
+    <thead>
+
+    <tr><th>Lighting Type</th><th>Count</th></tr>
+    </thead>
+
+  <% lighting_type_stats.each do |lighting_type, count| %>
+    <tr><th><%= lighting_type.to_s.humanize %></th><td><%= count %></td></tr>
+  <% end %>
+  </table>
+
 </div>
