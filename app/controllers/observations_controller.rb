@@ -1,5 +1,5 @@
 class ObservationsController < ApplicationController
-  before_action :set_observation, only: [:show, :edit, :update, :destroy]
+  before_action :set_observation, only: [:show, :edit, :update]
   before_action :authenticate_user!, only: [:edit, :statistics]
 
   # GET /observations
@@ -49,16 +49,6 @@ class ObservationsController < ApplicationController
         format.html { render :edit }
         format.json { render json: @observation.errors, status: :unprocessable_entity }
       end
-    end
-  end
-
-  # DELETE /observations/1
-  # DELETE /observations/1.json
-  def destroy
-    @observation.destroy
-    respond_to do |format|
-      format.html { redirect_to observations_url, notice: 'Observation was successfully destroyed.' }
-      format.json { head :no_content }
     end
   end
 

@@ -3,7 +3,7 @@
   <div id="map" style="height:300px;"></div>
 
   <div class='title'>
-    <h1>All Observations</h1>
+    <h1>Manage Observations</h1>
     <!--     <%= link_to 'New Observation', new_observation_path, class: 'button' %>
     <%= link_to 'Home', root_path, class: 'button' %> -->
   </div>
@@ -36,7 +36,7 @@
                   <span class="glyphicon glyphicon-eye-open"></span>
               <% end %>
             </td>
-            <td><%= link_to observation, method: :delete, data: { confirm: 'Are you sure?' } do%>
+            <td><%= link_to admin_observation_path(observation), method: :delete, data: { confirm: 'Are you sure?' } do%>
                   <span class="glyphicon glyphicon-remove-circle"></span>
               <% end %>
             </td>

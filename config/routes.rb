@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get 'statistics', to: 'observations#statistics'
 
   namespace :admin do
-    resources :observations, only: [:index]
+    resources :observations, only: [:index, :destroy]
   end
 
   # Example of regular route:
