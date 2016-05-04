@@ -13,8 +13,8 @@
       <li class='menu'><%= link_to 'Home', root_path %></li>
       <li class='menu'><%= link_to 'New Observation', new_observation_path %></li>
       <li class='menu'><%= link_to 'All observations', observations_path %></li>
-      <%= render :partial => "admin_login" if !user_signed_in? %>
-      <%= render :partial => "admin_nav" if user_signed_in? %>
+      <%= render :partial => "shared/admin_login" if !user_signed_in? %>
+      <%= render :partial => "shared/admin_nav" if user_signed_in? %>
     </ul>
   </div>
 </div>
