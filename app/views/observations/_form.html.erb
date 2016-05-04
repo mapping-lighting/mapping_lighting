@@ -23,7 +23,7 @@
   <div class="obs-form-group">
     <div class="field">
       <%= f.label :lighting_type, class: 'input-label' %>
-      <%= f.select(:lighting_type, options_for_select([['Street lamp', 'street'], ['Bus stop','bus'], ['Retail/Industry', 'retail_industry'], ['Car park', 'car_park'], ['Advertising - General', 'advertising_general'], ['Other', 'other']], 'street')) %>
+      <%= f.select(:lighting_type, options_for_select(Observation::AVAILABLE_LIGHTING_TYPES, 'street')) %>
     </div>
     <div class="field">
       <%= f.label :note %>
