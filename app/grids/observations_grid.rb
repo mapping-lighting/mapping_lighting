@@ -14,11 +14,11 @@ class ObservationsGrid
   end
   column(:lighting_type)
   column(:created_at) do |model|
-    model.created_at.to_datetime
+    model.created_at.to_date
   end
 
-  column(:name)
-  column(:email)
+  column(:name, :class => 'hidable')
+  column(:email, :class => 'hidable')
 
   column(:view, :html => true) do |record|
     link_to observation_path(record), method: :get do
