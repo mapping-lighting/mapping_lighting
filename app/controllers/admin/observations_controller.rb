@@ -4,6 +4,9 @@ class Admin::ObservationsController < ApplicationController
 
   def index
     @observations = Observation.all
+    @grid = ObservationsGrid.new(params[:observations_grid]) do |scope|
+      scope.page(params[:page])
+    end
   end
 
   # DELETE /observations/1
