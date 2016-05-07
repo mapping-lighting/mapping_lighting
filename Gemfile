@@ -40,6 +40,9 @@ gem 'mini_magick', '~> 4.3'
 gem 'devise'
 gem 'coffee-script'
 
+# Use datagrid for filtering reports
+gem 'datagrid'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
