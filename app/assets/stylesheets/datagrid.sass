@@ -19,6 +19,7 @@ table.datagrid
   background-color: transparent
   border-collapse: collapse
   width: 100%
+  margin-top: 20px
 
   th
     background-color: #eee
@@ -52,37 +53,31 @@ table.datagrid
 .datagrid-form
   background-color: #f0f0f0
   border-radius: 5px
-  padding: 20px
+  width: 100%
+  padding-bottom: 10px
+
 
 .datagrid-filter
   margin: 10px
-  +clearfix
 
   label
     width: $dg-form-label
     padding-left: 10px
-    float: left
-  a
-    float: left
+
 
   input[class*='filter']
     border: 2px solid #ccc
     border-radius: 4px
     float: left
     padding: 5px 12px
-    width: 207px
+    min-width: 150px
 
     &.from, &.to
-      width: 83px
 
-  select
-    float: left
-    width: 235px
 
     &[multiple]
       border: 2px solid #ccc
       border-radius: 5px
-      height: 100px
     &.dynamic_filter
       &.field
         width: 178px
@@ -98,31 +93,31 @@ table.datagrid
     margin: 6px 4px 0
   .enum_filter.checkboxes
     float: none
-    display: block
     input
       margin: 7px
-    margin-left: 150px
+
+  select
+    width: 170px
+
 
 
 .datagrid-actions
-  padding-left: $dg-form-label +10
-
+  padding-left: 10px
   input[type='submit']
-    background-color: #555
+    background-color: #2A88AD
+    border-radius: 10px 10px
     border: none
-    border-radius: 5px
     color: white
     cursor: pointer
-    font-size: 14px
+    font-size: 16px
     font-weight: bold
     line-height: normal
     padding: 7px 15px
     vertical-align: middle
-    +inline-block
 
     &:hover,
     &:focus
-      background-color: #333
+      background-color: #2A6881
 
     &:active
       background-color: #000
@@ -132,3 +127,10 @@ table.datagrid
     padding: 7px 15px
     vertical-align: middle
     +inline-block
+
+.filter-container
+  display: flex
+  justify-contents: space-between
+  padding: 0
+  margin: 0
+

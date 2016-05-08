@@ -1,10 +1,16 @@
 <%= form_for grid, options do |f| -%>
-  <% grid.filters.each do |filter| %>
-    <div class="datagrid-filter filter">
-      <%= f.datagrid_label filter %>
-      <%= f.datagrid_filter filter, partials: options[:partials], class: filter.options[:class] %>
-    </div>
-  <% end %>
+  <div class='filter-container'>
+    <% grid.filters.each do |filter| %>
+      <div class="datagrid-filter filter">
+        <div class='filter-label'>
+          <%= f.datagrid_label filter %>
+        </div>
+        <div>
+          <%= f.datagrid_filter filter, partials: options[:partials], class: filter.options[:class] %>
+        </div>
+      </div>
+    <% end %>
+  </div>
   <div class="datagrid-actions">
     <%= f.submit I18n.t("datagrid.form.search").html_safe, :class => "datagrid-submit" %>
     <%# https://github.com/rails/rails/pull/14949 -%>
