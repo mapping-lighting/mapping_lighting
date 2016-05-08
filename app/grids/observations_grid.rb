@@ -15,8 +15,9 @@ class ObservationsGrid
   filter(:lighting_type,
          :enum,
          :select => Observation::AVAILABLE_LIGHTING_TYPES,
-         :multiple => true,
-         :header => "Lighting type (multi select)")
+         :checkboxes => true,
+         :header => "Lighting type (multi select)",
+         :class => 'checkbox')
 
   column(:attachment, :html => true) do |model|
     image_tag(model.attachment.thumb)
