@@ -6,8 +6,17 @@ class ObservationsGrid
     Observation
   end
 
-  filter(:created_at, :date, :range => true, :class => 'datepicker')
-  filter(:lighting_type, :enum, :select => Observation::AVAILABLE_LIGHTING_TYPES, :multiple => true)
+  filter(:created_at,
+         :date,
+         :range => true,
+         :class => 'datepicker',
+         :header => "Created at (select date range)")
+
+  filter(:lighting_type,
+         :enum,
+         :select => Observation::AVAILABLE_LIGHTING_TYPES,
+         :multiple => true,
+         :header => "Lighting type (multi select)")
 
   column(:attachment, :html => true) do |model|
     image_tag(model.attachment.thumb)

@@ -1,6 +1,7 @@
 <div class='observation-grid'>
   <%= datagrid_form_for @grid, :method => :get, :url => admin_observations_path %>
   <%= paginate(@grid.assets) %>
+  <%=link_to "Export to CSV", url_for(format: 'csv', observations_grid: params[:observations_grid]) %>
   <%= datagrid_table @grid %>
   <%= paginate(@grid.assets) %>
 </div>

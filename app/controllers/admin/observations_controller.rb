@@ -4,10 +4,23 @@ class Admin::ObservationsController < ApplicationController
 
   def index
     @observations = Observation.all
-    @grid = ObservationsGrid.new(params[:observations_grid]) do |scope|
-      scope.page(params[:page])
+    # @grid = ObservationsGrid.new(params[:observations_grid]) do |scope|
+    #   scope.page(params[:page])
+    # end
+    @grid = ObservationsGrid.new(params[:observations_grid])
+    respond_to do |f|
+      f.html do
+        @grid.scope {|scope| scope.page(params[:page]) }
+      end
+      f.csv do
+        send_data @grid.to_csv,
+          type: "text/csv",
+          disposition: 'inline',
+          filename: "grid-#{Time.now.to_s}.csv"
+      end
     end
   end
+
 
   # DELETE /observations/1
   # DELETE /observations/1.json
