@@ -33,6 +33,10 @@ You can run the rake task `.env` to create this file automatically with useful d
 export MAPPING_LIGHTING_DATABASE_HOSTNAME=localhost
 export MAPPING_LIGHTING_DATABASE_USERNAME=postgres
 export MAPPING_LIGHTING_DATABASE_PASSWORD=
+
+export AWS_ACCESS_KEY_ID=
+export AWS_SECRET_ACCESS_KEY=
+export AWS_S3_BUCKET_NAME=
 ```
 
 Database creation

@@ -33,7 +33,9 @@ gem 'activerecord-postgis-adapter'
 gem 'leaflet-rails'
 
 # Use carrierwave for image uploading
-gem 'carrierwave', '~> 0.10.0'
+gem 'carrierwave', :git => 'https://github.com/carrierwaveuploader/carrierwave.git', ref: 'b893859067d6aea497809ace68293633e1d64672'
+gem "fog-aws"
+# gem "nokogiri",  "~> 1.6.0"
 gem 'mini_magick', '~> 4.3'
 
 # Use devise for authentication

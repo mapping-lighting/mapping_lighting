@@ -6,6 +6,12 @@ file '.env' do |task|
   export MAPPING_LIGHTING_DATABASE_HOSTNAME=localhost
   export MAPPING_LIGHTING_DATABASE_USERNAME=postgres
   export MAPPING_LIGHTING_DATABASE_PASSWORD=
+
+  # AWS S3 Credentials and Bucket Name, for image uploads.
+  # Production bucket is '2016-mapping-lighting'
+  export AWS_ACCESS_KEY_ID=
+  export AWS_SECRET_ACCESS_KEY=
+  export AWS_S3_BUCKET_NAME=
   DOTENV
 
   puts "Writing default content into `#{task.name}`"
