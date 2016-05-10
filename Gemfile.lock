@@ -49,8 +49,6 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    app_reset (0.0.10)
-      rails
     arel (6.0.3)
     autoprefixer-rails (6.3.6)
       execjs
@@ -232,7 +230,6 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-postgis-adapter
-  app_reset
   bootstrap-datepicker-rails
   bootstrap-sass (~> 3.3.6)
   byebug
