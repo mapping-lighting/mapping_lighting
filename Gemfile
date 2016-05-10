@@ -66,8 +66,6 @@ group :development, :test do
   gem 'byebug'
   # Pry as default console and or to open the execution and debug.
   gem 'pry'
-  # Development only hard-reset of the database migrations
-  gem 'app_reset'
 end
 
 group :development do
