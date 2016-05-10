@@ -1,7 +1,4 @@
 
-
-  <p id="notice"><%= notice %></p>
-
   <div id="map" style="height:300px;"></div>
 
   <div class='title'>
@@ -18,8 +15,6 @@
           <th>Lighting type</th>
           <th>Recorder location</th>
           <th>Note</th>
-          <th>Email</th>
-          <th>Name</th>
           <th colspan="2"></th>
         </tr>
       </thead>
@@ -32,8 +27,6 @@
             <td><%= observation.lighting_type %></td>
             <td><%= observation.recorder_location %></td>
             <td><%= observation.note %></td>
-            <td><%= observation.email %></td>
-            <td><%= observation.name %></td>
             <td><%= link_to observation do %>
                   <span class="glyphicon glyphicon-eye-open"></span>
                 <% end %>

@@ -12,7 +12,7 @@ gem 'sass-rails', '~> 5.0'
 
 # Use bootstrap for the date-picker on form
 gem 'momentjs-rails', '>= 2.9.0'
-gem 'bootstrap3-datetimepicker-rails', '~> 4.17.37'
+gem 'bootstrap-datepicker-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -39,6 +39,9 @@ gem 'mini_magick', '~> 4.3'
 # Use devise for authentication
 gem 'devise'
 gem 'coffee-script'
+
+# Use datagrid for filtering reports
+gem 'datagrid'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -73,3 +76,5 @@ group :development do
   gem 'spring'
 end
 
+
+gem 'kaminari'

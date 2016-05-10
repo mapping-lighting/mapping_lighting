@@ -19,3 +19,4 @@
 //= require moment
 //= require moment/en-au
 //= require bootstrap
+//= require bootstrap-datepicker

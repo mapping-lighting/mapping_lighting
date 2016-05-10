@@ -3,7 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'bootstrap-sprockets';
 @import "bootstrap";
-@import "bootstrap-datetimepicker";
 
 $font-sans-serif: 'Open Sans', 'Helvetica', Arial, sans-serif;
 $font-sans-serif-simple: 'Helvetica', Arial, sans-serif;
@@ -19,10 +18,10 @@ $label-color: #888;
 // Form styling
 .new_observation {
   font: $font-sans-serif;
-  width: 80%;
+  width: 90%;
   padding:30px;
-  margin:40px auto;
-  background: $primary-background-color;
+  margin: 20px auto 20px auto;
+  background: #fafafa;
   border-radius: 10px;
   -webkit-border-radius:10px;
   -moz-border-radius: 10px;
@@ -40,7 +39,7 @@ $label-color: #888;
       margin-bottom: 5px;
   }
 
-  input[type="text"], input[type="email"], input[type="datetime"], select {
+  input[type="text"], input[type="email"], input[type="datetime"], input[type="password"], select, textarea {
     display: inline-block;
     height: 40px;
     box-sizing: border-box;
@@ -51,9 +50,9 @@ $label-color: #888;
     -webkit-border-radius:6px;
     -moz-border-radius:6px;
     border: 2px solid $primary-background-color;
-    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
-    -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
-    -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+    box-shadow: inset 0px 1px 1px rgba(0.33, 0.33, 0.33, 0.33);
+    -moz-box-shadow: inset 0px 1px 1px rgba(0.33, 0.33, 0.33, 0.33);
+    -webkit-box-shadow: inset 0px 1px 1px rgba(0.33, 0.33, 0.33, 0.33);
     &:focus {
       outline: none;
       box-shadow: 0px 0px 1px 1px #2A88AD;
@@ -242,6 +241,9 @@ caption {
     margin-top: 5px;
     padding-left: 80px;
     padding-top: 5px;
+  }
+  .hidable {
+    display: none;
   }
 }
 
