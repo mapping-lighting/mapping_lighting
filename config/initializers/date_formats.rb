@@ -1,0 +1,1 @@
+Time::DATE_FORMATS[:file_name_timestamp] = '%Y-%m-%dT%H%M'

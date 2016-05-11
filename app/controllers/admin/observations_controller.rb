@@ -16,7 +16,7 @@ class Admin::ObservationsController < ApplicationController
         send_data @grid.to_csv,
           type: "text/csv",
           disposition: 'inline',
-          filename: "grid-#{Time.now.to_s}.csv"
+          filename: "grid-#{Time.now.to_s(:file_name_timestamp)}.csv"
       end
     end
   end
