@@ -10,6 +10,7 @@ $font-serif: 'Georgia', 'Times New Roman', Helvetica, Arial, sans-serif;
 
 $primary-background-color: #FFF ;
 $primary-contrast-color: #2A88AD ;
+$primary-contrast-color-fade: #7fb7cd;
 $btn-color: #F8F8F8;
 $btn-color-hover: #2A6881;
 $border-color: #257C9E;
@@ -175,6 +176,9 @@ $label-color: #888;
   font-size: 30px;
   font: $font-sans-serif;
   background: $primary-contrast-color;
+  margin-left: 0px;
+  margin-top: 15px;
+  border-radius: 5px 5px;
   padding: 10px 30px 15px 30px;
   color: $primary-background-color;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
@@ -184,16 +188,24 @@ $label-color: #888;
   border: 1px solid $border-color;
 }
 
+.col-md-4 > a {
+  text-decoration: none;
+  > button {
+    color: #990000;
+  }
+}
+
 a.button {
   font-size: 16px;
   font: $font-sans-serif;
   float: right;
   background-color: $btn-color;
   padding: 10px 30px;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  // margin-top: 20px;
+  // margin-bottom: 10px;
   text-decoration: none;
   border-radius: 10px 10px;
+  border: 1px solid $primary-contrast-color-fade;
   -webkit-border-radius: 10px 10px;
   -moz-border-radius: 10px 10px;
 }
@@ -267,3 +279,12 @@ caption {
     padding: 50px;
   }
 }
+
+.btn-red, .btn-lg, {
+  color: #990000;
+}
+
+.panel-default {
+  border: 1px solid $primary-contrast-color-fade;
+}
+

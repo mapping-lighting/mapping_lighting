@@ -1,4 +1,4 @@
-
+<!--
   <div class='title'>
     <h1>Welcome to the Mapping Lighting Project</h1>
   </div>
@@ -13,4 +13,75 @@
 
     </p>
   </div>
+ -->
+  <div class='landing'>
+        <!-- Call to Action Section -->
+        <div class="col-lg-12">
+          <h1 class="title">
+              Welcome to the Mapping Lighting Project
+          </h1>
+        </div>
 
+        <div class="well">
+            <div class="row">
+                <div class="col-md-8">
+                    <p>Welcome to the Mapping Lighting project for the Centre of Astrophysics and Supercomputing, Swinburne! Get familar with our purpose and how to contribute, or just jump straight in and record some observations!</p>
+                </div>
+                <div class="col-md-4">
+                    <%= link_to '<button type="button" class="btn btn-lg btn-default btn-block">Create an observation!</button>'.html_safe, new_observation_path %>
+                </div>
+            </div>
+        </div>
+
+        <!-- Marketing Icons Section -->
+        <div class="row">
+            <div class="col-md-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4><i class="fa fa-fw fa-compass"></i>Recent crowd-sourced observations</h4>
+                </div>
+                <div class="panel-body">
+                    <p>Want to get an idea of the types of lights people are uploading? </p>
+                    <%= link_to '<button type="button" class="btn-red btn btn-lg btn-default btn-block">View  observations</button>'.html_safe, observations_path %>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-check"></i>How do I start?</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Here is some placeholder text that will eventually explain how the process works and how you can provide the best information. We'll probably include an info graphic, but that functionality isn't here yet. </p>
+                        <a href="#" class="btn btn-default disabled">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-gift"></i>How might this information be used?</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>This section is used to make people understand how they are contributing, hopefully excite them to contribute more, and also allay the fears of the tin-foil-hat brigade.</p>
+                        <a href="#" class="btn btn-default disabled">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Mapping Lighting, A Swinburne ICT 80003 Professional Project</p>
+                </div>
+                 <!-- <div>image by <a href="http://www.freeimageslive.co.uk/free_stock_image/streetlampjpg" target="_blank"> freeimageslive.co.uk - SeaquestDS</a></div>
+                 image by <a href="http://www.freeimageslive.co.uk/free_stock_image/buchanan-street-central-glasgow-jpg" target="_blank"> freeimageslive.co.uk - photoeverywhere</a> -->
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
