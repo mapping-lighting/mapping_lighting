@@ -1,5 +1,9 @@
 class ObservationsGrid
 
+  def geographic_factory
+    @geographic_factory ||= RGeo::Geographic.simple_mercator_factory
+  end
+
   include Datagrid
 
   scope do
@@ -19,12 +23,30 @@ class ObservationsGrid
          :header => "Lighting type (multi select)",
          :class => 'checkbox')
 
-  column(:attachment, :html => true) do |model|
+  column(:image, :html => true) do |model|
     image_tag(model.attachment.thumb)
   end
+  column(:image, :html => false) do |model|
+    model.attachment.url
+  end
+
   column(:lighting_type)
   column(:created_at) do |model|
-    model.created_at.to_date
+    format(model.created_at) do |value|
+      value.to_date
+    end
+  end
+
+  column(:latitude)
+  column(:longitude)
+
+  column(:geo, html: false) do |observation|
+    begin
+      location = geographic_factory.point(observation.longitude, observation.latitude)
+      location.to_s
+    rescue StandardError
+      ""
+    end
   end
 
   column(:name, :class => 'hidable')

@@ -29,6 +29,8 @@ gem 'paperclip'
 
 # Use postGIS for geo data
 gem 'activerecord-postgis-adapter'
+gem 'rgeo-geojson'
+gem 'rgeo-kml'
 # Leaflet JS Mapping Library
 gem 'leaflet-rails'
 

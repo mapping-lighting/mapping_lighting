@@ -10,14 +10,25 @@
     </div>
   <% end %>
   <div class='obs-form-title'>
-    <h1>New Observation</h1>
-    <%= link_to 'Cancel', root_path, class: 'button' %>
+    <h1>Record a Lighting Observation</h1>
+    <%= link_to 'Go Back', root_path, class: 'button' %>
   </div>
   <div id="map" class="form-map" style="height:300px;"></div>
   <div class="obs-form-heading"><span class='title-span'>1</span>Take or upload a picture of your lighting observation</div>
   <div class="obs-form-group">
-    <%= f.file_field :attachment, accept: 'image/*' %>
+    <div class="row">
+      <div class="col6">
+        <%= f.label :file, class: 'input-label' %>
+        <%= f.file_field :attachment, accept: 'image/*' %>
+      </div>
+
+      <div class="col6">
+        <p>Try to include the light, and some of the surrounds in your image.</p>
+        <img width="25%" height="25%" src="<%= image_path('example_snapshot.jpg') %>" />
     <button id="cover" onclick="document.getElementById('observation_attachment').click(); return false;" >Click here to take a photo or upload a file </button>
+      </div>
+    </div>
+
   </div>
   <div class="obs-form-heading"><span class='title-span'>2</span>Enter observation details</div>
   <div class="obs-form-group">
@@ -28,17 +39,20 @@
     <div class="field">
       <%= f.label :note %>
       <%= f.text_area :note %>
+      <p>Please describe anything notable about the light source.</p>
     </div>
     <div class="field">
       <%= f.label :email %>
-      <%= f.text_field :email %>
+      <%= f.text_field :email, placeholder: '(Optional)'%>
+      <p>We will never share your email address.</p>
     </div>
     <div class="field">
       <%= f.label :name %>
-      <%= f.text_field :name %>
+      <%= f.text_field :name, placeholder: '(Optional)' %>
+      <p>Names are publicly visible on your recorded observations.</p>
     </div>
     <div class="field">
-      <%= f.label :I_provide_my_consent_for_this_image_to_be_used_as_part_of_this_study %>
+      <%= f.label :permission_given, "I consent to having this image used as part of this study." %>
       <%= f.check_box :permission_given, :required => true %>
     </div>
     <div class="field-hidden">
@@ -62,10 +76,10 @@
       <%= f.text_field :session_id %>
     </div>
   </div>
-  <div class="obs-form-heading"><span class='title-span'>3</span>Create new observation</div>
+  <div class="obs-form-heading"><span class='title-span'>3</span>Upload your observation</div>
   <div class="obs-form-group">
     <div class="actions">
-      <%= f.submit %>
+      <%= f.submit "Upload" %>
     </div>
   </div>
 <% end %>
