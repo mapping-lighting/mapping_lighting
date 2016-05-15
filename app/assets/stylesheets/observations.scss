@@ -65,8 +65,10 @@ $label-color: #888;
     outline: none;
   }
 
-  button#cover {
+  #input-button {
     background: #2A88AD;
+    width: 200px;
+    word-wrap: break-word;
     padding: 8px 20px 8px 20px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -77,7 +79,7 @@ $label-color: #888;
     -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
     box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
     border: 1px solid $border-color;
-    font-size: 15px;
+    font-size: 14px;
     margin-bottom: 10px;
     &:hover {
       background: #2A6881;
@@ -342,4 +344,12 @@ caption {
 figcaption {
   margin-bottom: 10px;
   max-width: 300px;
+}
+
+figure.content {
+  margin-bottom: 20px;
+}
+
+#gears {
+  margin-left: 20px;
 }

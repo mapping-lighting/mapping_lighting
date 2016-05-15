@@ -20,3 +20,4 @@
 //= require moment/en-au
 //= require bootstrap
 //= require bootstrap-datepicker
+//= require jasny-bootstrap.min
