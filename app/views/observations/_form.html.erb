@@ -14,10 +14,10 @@
     <%= link_to 'Cancel', root_path, class: 'button' %>
   </div>
   <div id="map" class="form-map" style="height:300px;"></div>
-  <div class="obs-form-heading"><span class='title-span'>1</span>Upload a picture of your lighting observation</div>
+  <div class="obs-form-heading"><span class='title-span'>1</span>Take or upload a picture of your lighting observation</div>
   <div class="obs-form-group">
-    <%= f.label :file, class: 'input-label' %>
     <%= f.file_field :attachment, accept: 'image/*' %>
+    <button id="cover" onclick="document.getElementById('observation_attachment').click(); return false;" >Click here to take a photo or upload a file </button>
   </div>
   <div class="obs-form-heading"><span class='title-span'>2</span>Enter observation details</div>
   <div class="obs-form-group">
