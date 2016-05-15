@@ -78,6 +78,11 @@ function toggleVisibility(id) {
   $('#'+id).toggle();
 }
 
+function checkPermissionAndToggle(id){
+  if ($('input#observation_permission_given').is(':checked'))
+    toggleVisibility(id);
+}
+
 function showExporting(id) {
   toggleVisibility(id);
   setTimeout(function() { closeAll('content'); }, 2500);
@@ -86,7 +91,6 @@ function showExporting(id) {
 $(document).ready(function(){
   closeAll('content');
 });
-
 
 
 $(document).ready(function(){

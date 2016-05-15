@@ -21,12 +21,12 @@
         <div class="fileinput fileinput-new" data-provides="fileinput">
           <!-- <button id="cover" onclick="document.getElementById('observation_attachment').click(); return false;" >Click here to take a photo or upload a file </button> -->
           <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
-            <img data-src="holder.js/100%x100%" alt="...">
+            <img id='thumbnail-src' data-src="holder.js/100%x100%" alt="...">
           </div>
           <%= f.file_field :attachment, accept: 'image/*' %>
           <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
           <div>
-            <span class="btn btn-default btn-file" id="input-button" onclick="document.getElementById('observation_attachment').click(); return false;"  ><span class="fileinput-new" >Take or upload a photo</span><span class="fileinput-exists">Change</span></span>
+            <span class="btn btn-default btn-file" id="input-button" onclick="document.getElementById('observation_attachment').click(); return false;"  ><span class="fileinput-new">Take or upload a photo</span><span class="fileinput-exists">Change</span></span>
             <%= link_to "Remove", "#", class: "btn fileupload-exists", "data-dismiss" => "fileinput" %>
           </div>
         </div>
@@ -87,7 +87,7 @@
   </div>
   <div class="obs-form-heading"><span class='title-span'>3</span>Upload your observation</div>
   <div class="obs-form-group">
-    <div class="actions" onclick="toggleVisibility('loading-gears');">
+    <div class="actions" onclick="checkPermissionAndToggle('loading-gears');">
       <figure class="content" id='loading-gears'>
         <figcaption id="upload-caption">Your file is uploading!</figcaption>
         <img width="50px" id="gears" height="50px" src="<%= image_path('gears.svg') %>" />
