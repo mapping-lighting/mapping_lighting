@@ -317,3 +317,22 @@ caption {
   border: 1px solid $primary-contrast-color-fade;
 }
 
+.flex-outer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.flex-left {
+  margin: 10px;
+  flex: 1 250px;
+}
+
+.flex-right {
+  margin: 10px;
+}
+
+figcaption {
+  margin-bottom: 10px;
+  max-width: 300px;
+}

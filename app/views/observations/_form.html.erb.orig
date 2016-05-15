@@ -14,20 +14,34 @@
     <%= link_to 'Go Back', root_path, class: 'button' %>
   </div>
   <div id="map" class="form-map" style="height:300px;"></div>
+<<<<<<< HEAD
   <div class="obs-form-heading"><span class='title-span'>1</span>Take or upload a picture of your lighting observation</div>
+||||||| merged common ancestors
+  <div class="obs-form-heading"><span class='title-span'>1</span>Upload a picture of your lighting observation</div>
+=======
+  <div class="obs-form-heading"><span class='title-span'>1</span>Take a picture of your lighting observation</div>
+>>>>>>> origin/master
   <div class="obs-form-group">
-    <div class="flex-outer">
-      <div class="flex-left">
-        <button id="cover" onclick="document.getElementById('observation_attachment').click(); return false;" >Click here to take a photo or upload a file </button>
+<<<<<<< HEAD
+    <%= f.file_field :attachment, accept: 'image/*' %>
+    <button id="cover" onclick="document.getElementById('observation_attachment').click(); return false;" >Click here to take a photo or upload a file </button>
+||||||| merged common ancestors
+    <%= f.label :file, class: 'input-label' %>
+    <%= f.file_field :attachment, accept: 'image/*' %>
+=======
+    <div class="row">
+      <div class="col6">
+        <%= f.label :file, class: 'input-label' %>
         <%= f.file_field :attachment, accept: 'image/*' %>
       </div>
 
-      <figure class="flex-right">
-        <figcaption id="upload-caption">Try to include the light, and some of the surrounds in your image.</figcaption>
-        <img width="50%" height="50%" src="<%= image_path('example_snapshot.jpg') %>" />
-      </figure>
+      <div class="col6">
+        <p>Try to include the light, and some of the surrounds in your image.</p>
+        <img width="25%" height="25%" src="<%= image_path('example_snapshot.jpg') %>" />
+      </div>
     </div>
 
+>>>>>>> origin/master
   </div>
   <div class="obs-form-heading"><span class='title-span'>2</span>Enter observation details</div>
   <div class="obs-form-group">
