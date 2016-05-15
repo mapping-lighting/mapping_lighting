@@ -1,4 +1,7 @@
 <div class='observation-grid' id='manage-observations'>
+  <div id="filters-overview">
+    <h4>Observation filters:</h4>
+  </div>
   <%= datagrid_form_for @grid, :method => :get, :url => admin_observations_path %>
   <%= paginate(@grid.assets) %>
   <div id='export-div'>
