@@ -66,6 +66,22 @@ function getLocation() {
   }
 }
 
+function closeAll(classNames) {
+  var divs = document.getElementsByClassName("content");
+  $.each(divs, function() {
+    $(this).toggle(false);
+  });
+}
+
+function toggleVisibility(id) {
+  closeAll('content');
+  $('#'+id).toggle();
+}
+
+$(document).ready(function(){
+  closeAll('content');
+});
+
 
 $(document).ready(function(){
   var map = document.getElementById('map');
