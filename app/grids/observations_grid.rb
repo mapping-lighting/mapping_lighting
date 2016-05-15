@@ -37,8 +37,8 @@ class ObservationsGrid
     end
   end
 
-  column(:latitude)
-  column(:longitude)
+  column(:latitude, :class => 'hidable')
+  column(:longitude, :class => 'hidable')
 
   column(:geo, html: false) do |observation|
     begin

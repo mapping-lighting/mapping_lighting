@@ -362,13 +362,24 @@ caption {
 
   #new_observation > div:nth-child(6),
   #new_observation > div:nth-child(8),
-  #new_observation > div:nth-child(10) {
+  #new_observation > div:nth-child(10),
+  #statistics-page,
+  #new_observations_grid {
     background-color: $mobile-warmth-light;
     border: 1px solid $mobile-warmth-dark-grey;
   }
 
-
-
+  #export-div, #export-link, #export-link > a {
+    background-color: $mobile-warmth-dark-grey;
+    color: $mobile-warmth-light;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    padding: 10px 10px 10px 5px;
+    text-decoration: none;
+    border-radius: 3px;
+  }
 
   a.button {
     font-size: 12px;
@@ -388,14 +399,15 @@ caption {
     display: none;
   }
 
-  .table{
+  .table, #manage-observations > table {
     background-color: $mobile-warmth-light;
   }
   .table-striped > tbody > tr:nth-of-type(odd) {
     background-color: $mobile-warmth-light;
   }
 
-  .table-striped > tbody > tr:nth-of-type(even) {
+  .table-striped > tbody > tr:nth-of-type(even),
+  #manage-observations > table > thead > tr > th {
     background-color: $mobile-warmth;
   }
 }
