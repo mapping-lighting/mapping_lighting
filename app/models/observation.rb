@@ -6,10 +6,10 @@ class Observation < ActiveRecord::Base
 
 
   def latitude
-    recorder_location_data['latitude']
+    recorder_location_data['latitude'] unless !recorder_location_data
   end
 
   def longitude
-    recorder_location_data['longitude']
+    recorder_location_data['longitude'] unless !recorder_location_data
   end
 end
