@@ -13,7 +13,7 @@
 <!--           <th>Observed at</th> -->
           <th>File</th>
           <th>Lighting type</th>
-          <th>Recorder location</th>
+          <th>Recorder location data</th>
           <th>name</th>
           <th colspan="2"></th>
         </tr>
@@ -25,7 +25,7 @@
 <!--             <td><%= observation.observed_at %></td> -->
             <td><%= image_tag observation.attachment.thumb.url %></td>
             <td><%= observation.lighting_type %></td>
-            <td><%= observation.recorder_location %></td>
+            <td><%= observation.lat_lng_display  %></td>
             <td><%= observation.name %></td>
             <td><%= link_to observation do %>
                   <span class="glyphicon glyphicon-eye-open"></span>

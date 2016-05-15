@@ -12,4 +12,14 @@ class Observation < ActiveRecord::Base
   def longitude
     recorder_location_data['longitude'] unless !recorder_location_data
   end
+
+  def lat_lng_display
+    return "None recorded." if !latitude && !longitude;
+    "#{latitude.round(5)} : #{longitude.round(5)}"
+  end
+
+  def lat_lng
+    return "None recorded." if !latitude && !longitude;
+    "#{latitude} : #{longitude}"
+  end
 end
