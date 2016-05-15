@@ -5,7 +5,7 @@ class ObservationsController < ApplicationController
   # GET /observations
   # GET /observations.json
   def index
-    @observations = Observation.all
+    @observations = Observation.all.reverse_order
   end
 
   # GET /observations/1
