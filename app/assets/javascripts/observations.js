@@ -68,6 +68,8 @@ function getLocation() {
 
 
 $(document).ready(function(){
+  var map = document.getElementById('map');
+  if(!map) return;
   //$('#observation_attachment').change(imageChange);
   initMap();
 
