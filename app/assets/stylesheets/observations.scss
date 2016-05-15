@@ -8,9 +8,15 @@ $font-sans-serif: 'Open Sans', 'Helvetica', Arial, sans-serif;
 $font-sans-serif-simple: 'Helvetica', Arial, sans-serif;
 $font-serif: 'Georgia', 'Times New Roman', Helvetica, Arial, sans-serif;
 
+$mobile-warmth-light: #fefdfa;
+$mobile-warmth: #fefaf2;
+$mobile-warmth-grey: #cac4b8;
+$mobile-warmth-dark-grey: #7e7a73;
+$mobile-warmth-dark: #32312e;
 $primary-background-color: #FFF ;
 $primary-contrast-color: #2A88AD ;
 $primary-contrast-color-fade: #7fb7cd;
+$primary-contrast-extra-fade: #E9F3F6;
 $btn-color: #F8F8F8;
 $btn-color-hover: #2A6881;
 $border-color: #257C9E;
@@ -227,6 +233,17 @@ $label-color: #888;
   }
 }
 
+.table{
+  background-color: $btn-color;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: $btn-color;
+}
+
+.table-striped > tbody > tr:nth-of-type(even) {
+  background-color: $primary-contrast-extra-fade;
+}
+
 a.button {
   font-size: 16px;
   font: $font-sans-serif;
@@ -277,7 +294,82 @@ caption {
   }
 }
 
-@media (max-width: 540px) {
+// Start media - mobile width ---------------------------------------------------------
+
+@media (max-width: 570px) {
+  .container-fluid {
+    background-color: $mobile-warmth-dark;
+  }
+
+  .well {
+    background-color: $mobile-warmth-light;
+    color: $mobile-warmth-dark;
+  }
+
+  h1.title, form > .obs-form-title, {
+    background-color: $mobile-warmth-dark-grey;
+    color: $mobile-warmth-light;
+    border: 1px solid $mobile-warmth-dark;
+  }
+
+  .obs-form-title > a.button, .obs-form-title > a.button {
+    background-color: $mobile-warmth-dark-grey;
+    color: $mobile-warmth-light;
+    &:hover {
+      background-color: $mobile-warmth-dark-grey;
+      color: $mobile-warmth-grey;
+    }
+  }
+
+  .panel-default, form#new-observation {
+    background-color: $mobile-warmth-light;
+    color: $mobile-warmth-dark;
+  }
+
+  .panel .panel-heading {
+    background-color: $mobile-warmth;
+    color: $mobile-warmth-dark;
+  }
+
+  #nav-bar-mobile {
+    background-color: $mobile-warmth-dark;
+    li > a {
+      color: $mobile-warmth;
+      &:hover{
+        color: $mobile-warmth-grey;
+      }
+    }
+  }
+
+  .navbar.navbar-default {
+    background-color: $mobile-warmth-dark;
+    border: none;
+  }
+
+  div.well > div > div.col-md-4 > a > button,
+  div.row > div:nth-child(1) > div > div.panel-body > a > button,
+  div.row > div:nth-child(2) > div > div.panel-body > a,
+  div.row > div:nth-child(3) > div > div.panel-body > a,
+  #how-is-this-used > a,
+  #how-do-I-start > a {
+    background-color: $primary-contrast-color;
+    color: $mobile-warmth;
+  }
+
+  #new_observation {
+    background-color: $mobile-warmth;
+  }
+
+  #new_observation > div:nth-child(6),
+  #new_observation > div:nth-child(8),
+  #new_observation > div:nth-child(10) {
+    background-color: $mobile-warmth-light;
+    border: 1px solid $mobile-warmth-dark-grey;
+  }
+
+
+
+
   a.button {
     font-size: 12px;
     background-color: $primary-contrast-color;
@@ -295,7 +387,20 @@ caption {
   .hidable {
     display: none;
   }
+
+  .table{
+    background-color: $mobile-warmth-light;
+  }
+  .table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: $mobile-warmth-light;
+  }
+
+  .table-striped > tbody > tr:nth-of-type(even) {
+    background-color: $mobile-warmth;
+  }
 }
+
+// End Media Query -------------------------------------------
 
 .navbar-default .navbar-nav > li > a {
   color: $primary-contrast-color;
