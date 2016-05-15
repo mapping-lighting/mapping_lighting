@@ -78,9 +78,15 @@ function toggleVisibility(id) {
   $('#'+id).toggle();
 }
 
+function showExporting(id) {
+  toggleVisibility(id);
+  setTimeout(function() { closeAll('content'); }, 2500);
+}
+
 $(document).ready(function(){
   closeAll('content');
 });
+
 
 
 $(document).ready(function(){
