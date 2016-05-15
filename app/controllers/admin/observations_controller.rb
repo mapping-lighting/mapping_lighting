@@ -4,9 +4,7 @@ class Admin::ObservationsController < ApplicationController
 
   def index
     @observations = Observation.all
-    # @grid = ObservationsGrid.new(params[:observations_grid]) do |scope|
-    #   scope.page(params[:page])
-    # end
+
     @grid = ObservationsGrid.new(params[:observations_grid])
     respond_to do |f|
       f.html do
@@ -32,7 +30,10 @@ class Admin::ObservationsController < ApplicationController
     end
   end
 
-  private def set_observation
+  private
+
+  def set_observation
     @observation = Observation.find(params[:id])
   end
+
 end
