@@ -3,6 +3,7 @@
     <h4>Observation filters:</h4>
   </div>
   <%= datagrid_form_for @grid, :method => :get, :url => admin_observations_path %>
+  <span>Pages:</span>
   <%= paginate(@grid.assets) %>
   <div id='export-div'>
     <span id='export-link' onclick="showExporting('loading-gears');">

@@ -324,6 +324,10 @@ caption {
   }
 }
 
+#manage-observations > span {
+  color: $primary-contrast-color;
+}
+
 
 
 // Start media - mobile width ---------------------------------------------------------
@@ -345,14 +349,16 @@ caption {
   }
 
   .obs-form-title > a.button, .obs-form-title > a.button {
-    background-color: $mobile-warmth-dark-grey;
-    color: $mobile-warmth-light;
+    padding: 10px;
+    background-color: $btn-color;
+    color: $mobile-warmth-dark;
     &:hover {
-      background-color: $mobile-warmth-dark-grey;
+      background-color: $btn-color-hover;
       color: $mobile-warmth-grey;
     }
   }
 
+body > div.container-fluid > div > div.well > div > div.col-md-4 > a > button
   .panel-default, form#new-observation {
     background-color: $mobile-warmth-light;
     color: $mobile-warmth-dark;
@@ -378,6 +384,11 @@ caption {
     border: none;
   }
 
+  #manage-observations > span {
+    color: $primary-contrast-color;
+  }
+
+  #view-obs,
   div.well > div > div.col-md-4 > a > button,
   div.row > div:nth-child(1) > div > div.panel-body > a > button,
   div.row > div:nth-child(2) > div > div.panel-body > a,
@@ -386,6 +397,13 @@ caption {
   #how-do-I-start > a {
     background-color: $primary-contrast-color;
     color: $mobile-warmth;
+    &:hover {
+      color: $mobile-warmth-grey;
+      text-decoration: none;
+    }
+    &:focus {
+      outline: none;
+    }
   }
 
   #new_observation {
@@ -412,7 +430,7 @@ caption {
     text-decoration: none;
     border-radius: 3px;
     &:hover {
-      color: $primary-contrast-color;
+      color: $primary-contrast-color-fade;
     }
   }
 
@@ -451,6 +469,13 @@ caption {
 
 .navbar-default .navbar-nav > li > a {
   color: $primary-contrast-color;
+  &:hover {
+    color: $mobile-warmth-dark;
+  }
+}
+
+#nav-bar-mobile > ul > li > a .on {
+  color: red;
 }
 
 .navbar.navbar-default {
@@ -472,6 +497,7 @@ caption {
 
 .btn-red, .btn-lg, {
   color: #990000;
+  display: block;
 }
 
 .panel-default {
