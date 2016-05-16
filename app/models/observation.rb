@@ -24,4 +24,8 @@ class Observation < ActiveRecord::Base
     return "None recorded." if !latitude && !longitude;
     "#{latitude} : #{longitude}"
   end
+
+  def note_display
+    note.present? ? note : "None recorded"
+  end
 end
