@@ -14,20 +14,30 @@
     <%= link_to 'Go Back', root_path, class: 'button' %>
   </div>
   <div id="map" class="form-map" style="height:300px;"></div>
-  <div class="obs-form-heading"><span class='title-span'>1</span>Take a picture of your lighting observation</div>
+  <div class="obs-form-heading"><span class='title-span'>1</span>Take or upload a picture of your lighting observation</div>
   <div class="obs-form-group">
-    <div class="row">
-      <div class="col6">
-        <%= f.label :file, class: 'input-label' %>
-        <%= f.file_field :attachment, accept: 'image/*' %>
+    <div class="flex-outer">
+      <div class="flex-left">
+        <div class="fileinput fileinput-new" data-provides="fileinput">
+          <!-- <button id="cover" onclick="document.getElementById('observation_attachment').click(); return false;" >Click here to take a photo or upload a file </button> -->
+          <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
+            <img id='thumbnail-src' data-src="holder.js/100%x100%" alt="...">
+          </div>
+          <%= f.file_field :attachment, accept: 'image/*' %>
+          <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
+          <div>
+            <span class="btn btn-default btn-file" id="input-button" onclick="document.getElementById('observation_attachment').click(); return false;"  ><span class="fileinput-new">Take or upload a photo</span><span class="fileinput-exists">Change</span></span>
+            <%= link_to "Remove", "#", class: "btn fileupload-exists", "data-dismiss" => "fileinput" %>
+          </div>
+        </div>
+
       </div>
 
-      <div class="col6">
-        <p>Try to include the light, and some of the surrounds in your image.</p>
-        <img width="25%" height="25%" src="<%= image_path('example_snapshot.jpg') %>" />
-      </div>
+      <figure class="flex-right">
+        <figcaption id="upload-caption">Try to include the light, and some of the surrounds in your image.</figcaption>
+        <img width="50%" height="50%" src="<%= image_path('example_snapshot.jpg') %>" />
+      </figure>
     </div>
-
   </div>
   <div class="obs-form-heading"><span class='title-span'>2</span>Enter observation details</div>
   <div class="obs-form-group">
@@ -77,7 +87,13 @@
   </div>
   <div class="obs-form-heading"><span class='title-span'>3</span>Upload your observation</div>
   <div class="obs-form-group">
-    <div class="actions">
+    <div id="loader">
+      <figure class="content" id='loading-gears'>
+        <figcaption id="upload-caption">Your file is uploading!</figcaption>
+        <img width="50px" id="gears" height="50px" src="<%= image_path('gears.svg') %>" />
+      </figure>
+    </div>
+    <div class="actions" onclick="checkPermissionAndToggle('loading-gears');">
       <%= f.submit "Upload" %>
     </div>
   </div>

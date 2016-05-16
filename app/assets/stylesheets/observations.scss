@@ -8,8 +8,15 @@ $font-sans-serif: 'Open Sans', 'Helvetica', Arial, sans-serif;
 $font-sans-serif-simple: 'Helvetica', Arial, sans-serif;
 $font-serif: 'Georgia', 'Times New Roman', Helvetica, Arial, sans-serif;
 
+$mobile-warmth-light: #fefdfa;
+$mobile-warmth: #fefaf2;
+$mobile-warmth-grey: #cac4b8;
+$mobile-warmth-dark-grey: #7e7a73;
+$mobile-warmth-dark: #32312e;
 $primary-background-color: #FFF ;
 $primary-contrast-color: #2A88AD ;
+$primary-contrast-color-fade: #7fb7cd;
+$primary-contrast-extra-fade: #E9F3F6;
 $btn-color: #F8F8F8;
 $btn-color-hover: #2A6881;
 $border-color: #257C9E;
@@ -63,6 +70,38 @@ $label-color: #888;
   input[type="submit"]:focus {
     outline: none;
   }
+
+  #input-button {
+    background: #2A88AD;
+    width: 200px;
+    word-wrap: break-word;
+    padding: 8px 20px 8px 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    color: $primary-background-color;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    border: 1px solid $border-color;
+    font-size: 14px;
+    margin-bottom: 10px;
+    &:hover {
+      background: #2A6881;
+      -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+      -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+      box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+  input#observation_attachment {
+    display: none;
+  }
+
   textarea {
     width: 100%;
     height: 60px;
@@ -175,6 +214,9 @@ $label-color: #888;
   font-size: 30px;
   font: $font-sans-serif;
   background: $primary-contrast-color;
+  margin-left: 0px;
+  margin-top: 15px;
+  border-radius: 5px 5px;
   padding: 10px 30px 15px 30px;
   color: $primary-background-color;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
@@ -182,6 +224,43 @@ $label-color: #888;
   -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
   box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
   border: 1px solid $border-color;
+}
+
+.col-md-4 > a {
+  text-decoration: none;
+  > button {
+    color: #990000;
+  }
+}
+
+#filters-overview {
+  background-color: $primary-contrast-color;
+  color: white;
+  border-radius: 3px;
+  h4 {
+    padding: 10px;
+  }
+}
+
+#toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#how-do-I-start {
+  border: 2px solid $mobile-warmth-dark-grey;
+}
+
+.table{
+  background-color: $btn-color;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: $btn-color;
+}
+
+.table-striped > tbody > tr:nth-of-type(even) {
+  background-color: $primary-contrast-extra-fade;
 }
 
 a.button {
@@ -194,6 +273,7 @@ a.button {
   margin-bottom: 10px;
   text-decoration: none;
   border-radius: 10px 10px;
+  border: 1px solid $primary-contrast-color-fade;
   -webkit-border-radius: 10px 10px;
   -moz-border-radius: 10px 10px;
 }
@@ -219,6 +299,26 @@ caption {
   text-align: center;
 }
 
+#export-div, #export-link, #export-link > a {
+  background-color: $primary-background-color;
+  color: $primary-contrast-color;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: -10px;
+  padding: 10px 10px 10px 5px;
+  text-decoration: none;
+  border-radius: 3px;
+  &:hover {
+    color: $mobile-warmth-dark-grey;
+  }
+}
+
+#loading-gears {
+  padding-left: 5px;
+}
+
+
 @media (max-width: 800px) {
   .new_observation {
     width: 100%;
@@ -233,7 +333,116 @@ caption {
   }
 }
 
-@media (max-width: 540px) {
+#manage-observations > span {
+  color: $primary-contrast-color;
+}
+
+
+
+// Start media - mobile width ---------------------------------------------------------
+
+@media (max-width: 570px) {
+  .container-fluid {
+    background-color: $mobile-warmth-dark;
+  }
+
+  .well {
+    background-color: $mobile-warmth-light;
+    color: $mobile-warmth-dark;
+  }
+
+  h1.title, form > .obs-form-title, {
+    background-color: $mobile-warmth-dark-grey;
+    color: $mobile-warmth-light;
+    border: 1px solid $mobile-warmth-dark;
+  }
+
+  .obs-form-title > a.button, .obs-form-title > a.button {
+    padding: 10px;
+    background-color: $btn-color;
+    color: $mobile-warmth-dark;
+    &:hover {
+      background-color: $btn-color-hover;
+      color: $mobile-warmth-grey;
+    }
+  }
+
+body > div.container-fluid > div > div.well > div > div.col-md-4 > a > button
+  .panel-default, form#new-observation {
+    background-color: $mobile-warmth-light;
+    color: $mobile-warmth-dark;
+  }
+
+  .panel .panel-heading {
+    background-color: $mobile-warmth;
+    color: $mobile-warmth-dark;
+  }
+
+  #nav-bar-mobile {
+    background-color: $mobile-warmth-dark;
+    li > a {
+      color: $mobile-warmth;
+      &:hover{
+        color: $mobile-warmth-grey;
+      }
+    }
+  }
+
+  .navbar.navbar-default {
+    background-color: $mobile-warmth-dark;
+    border: none;
+  }
+
+  #manage-observations > span {
+    color: $primary-contrast-color;
+  }
+
+  #view-obs,
+  div.well > div > div.col-md-4 > a > button,
+  div.row > div:nth-child(1) > div > div.panel-body > a > button,
+  div.row > div:nth-child(2) > div > div.panel-body > a,
+  div.row > div:nth-child(3) > div > div.panel-body > a,
+  #how-is-this-used > a,
+  #how-do-I-start > a {
+    background-color: $primary-contrast-color;
+    color: $mobile-warmth;
+    &:hover {
+      color: $mobile-warmth-grey;
+      text-decoration: none;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+  #new_observation {
+    background-color: $mobile-warmth;
+  }
+
+  #new_observation > div:nth-child(6),
+  #new_observation > div:nth-child(8),
+  #new_observation > div:nth-child(10),
+  #statistics-page,
+  #new_observations_grid {
+    background-color: $mobile-warmth-light;
+    border: 1px solid $mobile-warmth-dark-grey;
+  }
+
+  #export-div, #export-link, #export-link > a {
+    background-color: $mobile-warmth-dark-grey;
+    color: $mobile-warmth-light;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    padding: 10px 10px 10px 5px;
+    text-decoration: none;
+    border-radius: 3px;
+    &:hover {
+      color: $primary-contrast-color-fade;
+    }
+  }
+
   a.button {
     font-size: 12px;
     background-color: $primary-contrast-color;
@@ -241,14 +450,41 @@ caption {
     margin-top: 5px;
     padding-left: 80px;
     padding-top: 5px;
+    border: none;
+    &:hover{
+      background-color: $primary-contrast-color;
+      border: none;
+    }
   }
+
   .hidable {
     display: none;
   }
+
+  .table, #manage-observations > table {
+    background-color: $mobile-warmth-light;
+  }
+  .table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: $mobile-warmth-light;
+  }
+
+  .table-striped > tbody > tr:nth-of-type(even),
+  #manage-observations > table > thead > tr > th {
+    background-color: $mobile-warmth;
+  }
 }
+
+// End Media Query -------------------------------------------
 
 .navbar-default .navbar-nav > li > a {
   color: $primary-contrast-color;
+  &:hover {
+    color: $mobile-warmth-dark;
+  }
+}
+
+#nav-bar-mobile > ul > li > a .on {
+  color: red;
 }
 
 .navbar.navbar-default {
@@ -266,4 +502,41 @@ caption {
     vertical-align: center;
     padding: 50px;
   }
+}
+
+.btn-red, .btn-lg, {
+  color: #990000;
+  display: block;
+}
+
+.panel-default {
+  border: 1px solid $primary-contrast-color-fade;
+}
+
+.flex-outer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.flex-left {
+  margin: 10px;
+  flex: 1 250px;
+}
+
+.flex-right {
+  margin: 10px;
+}
+
+figcaption {
+  margin-bottom: 10px;
+  max-width: 300px;
+}
+
+figure#loading-gears {
+  margin-bottom: 20px;
+}
+
+#gears {
+  margin-left: 20px;
 }

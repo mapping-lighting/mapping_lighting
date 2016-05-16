@@ -1,7 +1,19 @@
-<div class='observation-grid'>
+<div class='observation-grid' id='manage-observations'>
+  <div id="filters-overview">
+    <h4>Observation filters:</h4>
+  </div>
   <%= datagrid_form_for @grid, :method => :get, :url => admin_observations_path %>
+  <span>Pages:</span>
   <%= paginate(@grid.assets) %>
-  <%=link_to "Export to CSV", url_for(format: 'csv', observations_grid: params[:observations_grid]) %>
+  <div id='export-div'>
+    <span id='export-link' onclick="showExporting('loading-gears');">
+      <%=link_to "Export to CSV", url_for(format: 'csv', observations_grid: params[:observations_grid]) %>
+    </span>
+    <span class="content" id='loading-gears'>
+      <figcaption id="upload-caption">Your file is exporting!</figcaption>
+      <img width="50px" id="gears" height="50px" src="<%= image_path('gears.svg') %>" />
+    </span>
+  </div>
   <%= datagrid_table @grid %>
   <%= paginate(@grid.assets) %>
 </div>

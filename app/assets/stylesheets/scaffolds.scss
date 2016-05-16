@@ -21,10 +21,16 @@ pre {
 
 #notice {
   padding: 15px;
-  color: #004600;
+  color: #990000;
+  font-weight: 500;
+  font-size: 12pt;
 }
 
-
+@media (max-width: 570px) {
+  #notice {
+    color: #7fb7cd;
+  }
+}
 #error_explanation {
   width: 450px;
   border: 2px solid red;
@@ -48,4 +54,13 @@ pre {
     font-size: 12px;
     list-style: square;
   }
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+a {
+  color: #2A88AD;
+  text-decoration: none;
 }

@@ -10,6 +10,8 @@ gem 'pg', '~> 0.15'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
 
+gem 'jasny-bootstrap-rails'
+
 # Use bootstrap for the date-picker on form
 gem 'momentjs-rails', '>= 2.9.0'
 gem 'bootstrap-datepicker-rails'

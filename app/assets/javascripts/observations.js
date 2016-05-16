@@ -1,7 +1,6 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
 
-
 var coords_set = [];
 var map;
 var setExifData = function setExifData(newData) {
@@ -67,7 +66,44 @@ function getLocation() {
 }
 
 
+function closeAll(classNames) {
+  var divs = document.getElementsByClassName("content");
+  $.each(divs, function() {
+    $(this).toggle(false);
+  });
+}
+
+function toggleVisibility(id) {
+  closeAll('content');
+  $('#'+id).toggle();
+}
+
+function checkPermissionAndToggle(id){
+  if ($('input#observation_permission_given').is(':checked'))
+    toggleVisibility(id);
+}
+
+function showExporting(id) {
+  toggleVisibility(id);
+  setTimeout(function() { closeAll('content'); }, 2500);
+}
+
 $(document).ready(function(){
+  closeAll('content');
+});
+
+$(function() {
+  if($(window).width() <= 540) {
+    $
+    $("img").each(function() {
+      $(this).attr("src", $(this).attr("src").replace("/images/how_do_i_start_wide.png", "/images/how_do_i_start.jpg"));
+    });
+  }
+});
+
+$(document).ready(function(){
+  var map = document.getElementById('map');
+  if(!map) return;
   //$('#observation_attachment').change(imageChange);
   initMap();
 

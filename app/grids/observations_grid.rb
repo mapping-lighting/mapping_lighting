@@ -14,13 +14,13 @@ class ObservationsGrid
          :date,
          :range => true,
          :class => 'datepicker',
-         :header => "Created at (select date range)")
+         :header => "Filter by date created (select date range)")
 
   filter(:lighting_type,
          :enum,
          :select => Observation::AVAILABLE_LIGHTING_TYPES,
          :checkboxes => true,
-         :header => "Lighting type (multi select)",
+         :header => "Filter by lighting type (multi select)",
          :class => 'checkbox')
 
   column(:image, :html => true) do |model|
@@ -37,8 +37,8 @@ class ObservationsGrid
     end
   end
 
-  column(:latitude)
-  column(:longitude)
+  column(:latitude, :class => 'hidable')
+  column(:longitude, :class => 'hidable')
 
   column(:geo, html: false) do |observation|
     begin
@@ -51,6 +51,7 @@ class ObservationsGrid
 
   column(:name, :class => 'hidable')
   column(:email, :class => 'hidable')
+  column(:note, :class => 'hidable')
 
   column(:view, :html => true) do |record|
     link_to observation_path(record), method: :get do
