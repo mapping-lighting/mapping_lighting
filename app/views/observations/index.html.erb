@@ -3,14 +3,13 @@
 
   <div class='title'>
     <h1>All Observations</h1>
-<!--     <%= link_to 'New Observation', new_observation_path, class: 'button' %>
-    <%= link_to 'Home', root_path, class: 'button' %> -->
+    <%= link_to 'Go Back', root_path, class: 'button' %>
   </div>
   <div class='table-responsive'>
     <table class='table table-striped table-hover'>
       <thead>
         <tr>
-<!--           <th>Observed at</th> -->
+      <th>Observed at</th>
           <th>File</th>
           <th>Lighting type</th>
           <th>Recorder location data</th>
@@ -22,7 +21,7 @@
       <tbody>
         <% @observations.each do |observation| %>
           <tr>
-<!--             <td><%= observation.observed_at %></td> -->
+            <td><%= observation.observed_at %></td>
             <td><%= image_tag observation.attachment.thumb.url %></td>
             <td><%= observation.lighting_type %></td>
             <td><%= observation.lat_lng_display  %></td>
