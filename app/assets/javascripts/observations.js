@@ -65,13 +65,6 @@ function getLocation() {
   }
 }
 
-$(function() {
-  if($(window).width() <= 540) {
-    $("img").each(function() {
-      $(this).attr("src", $(this).attr("src").replace("/images/how_do_i_start_wide.png", "/images/how_do_i_start.jpg"));
-    });
-  }
-});
 
 function closeAll(classNames) {
   var divs = document.getElementsByClassName("content");
@@ -95,14 +88,18 @@ function showExporting(id) {
   setTimeout(function() { closeAll('content'); }, 2500);
 }
 
-
-
-
-
 $(document).ready(function(){
   closeAll('content');
 });
 
+$(function() {
+  if($(window).width() <= 540) {
+    $
+    $("img").each(function() {
+      $(this).attr("src", $(this).attr("src").replace("/images/how_do_i_start_wide.png", "/images/how_do_i_start.jpg"));
+    });
+  }
+});
 
 $(document).ready(function(){
   var map = document.getElementById('map');

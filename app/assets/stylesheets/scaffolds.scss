@@ -26,7 +26,11 @@ pre {
   font-size: 12pt;
 }
 
-
+@media (max-width: 570px) {
+  #notice {
+    color: #7fb7cd;
+  }
+}
 #error_explanation {
   width: 450px;
   border: 2px solid red;

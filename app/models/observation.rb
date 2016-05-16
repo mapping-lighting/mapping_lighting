@@ -22,7 +22,7 @@ class Observation < ActiveRecord::Base
 
   def lat_lng
     return "None recorded." if !latitude && !longitude;
-    "#{latitude} : #{longitude}"
+    "#{latitude}, #{longitude}"
   end
 
   def note_display

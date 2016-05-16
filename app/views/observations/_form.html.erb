@@ -87,11 +87,13 @@
   </div>
   <div class="obs-form-heading"><span class='title-span'>3</span>Upload your observation</div>
   <div class="obs-form-group">
-    <div class="actions" onclick="checkPermissionAndToggle('loading-gears');">
+    <div id="loader">
       <figure class="content" id='loading-gears'>
         <figcaption id="upload-caption">Your file is uploading!</figcaption>
         <img width="50px" id="gears" height="50px" src="<%= image_path('gears.svg') %>" />
       </figure>
+    </div>
+    <div class="actions" onclick="checkPermissionAndToggle('loading-gears');">
       <%= f.submit "Upload" %>
     </div>
   </div>
