@@ -242,6 +242,15 @@ $label-color: #888;
   }
 }
 
+#toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#how-do-I-start {
+  border: 2px solid $mobile-warmth-dark-grey;
+}
 
 .table{
   background-color: $btn-color;
