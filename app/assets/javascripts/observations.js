@@ -94,10 +94,14 @@ $(document).ready(function(){
 
 $(function() {
   if($(window).width() <= 540) {
-    $
-    $("img").each(function() {
-      $(this).attr("src", $(this).attr("src").replace("/images/how_do_i_start_wide.png", "/images/how_do_i_start.jpg"));
-    });
+      try  {
+          $("img").each(function() {
+          $(this).attr("src", $(this).attr("src").replace("/images/how_do_i_start_wide.png", "/images/how_do_i_start.jpg"));
+      });
+      } catch (e) {
+          //YOLOL
+      }
+
   }
 });
 
