@@ -49,6 +49,11 @@ gem 'coffee-script'
 # Use datagrid for filtering reports
 gem 'datagrid'
 
+
+# Active Link To simplifies styling active links
+gem 'active_link_to'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
