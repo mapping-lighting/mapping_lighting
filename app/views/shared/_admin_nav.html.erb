@@ -1,9 +1,5 @@
-<li class='menu'>
-  <%= link_to 'Statistics', statistics_path %>
-</li>
-<li class='menu'>
-  <%= link_to 'Manage Observations', admin_observations_path %>
-</li>
+<%= active_link_to 'Statistics', statistics_path, wrap_tag: :li, :active => :exclusive %>
+<%= active_link_to 'Manage Observations', admin_observations_path, wrap_tag: :li, :active => :exclusive %>
 
 <li class='menu'>
   <%= link_to("Logout", destroy_user_session_path, :method => :delete) %>

@@ -10,10 +10,10 @@
   </button>
   </div>
   <div class="collapse navbar-collapse navbar-ex1-collapse"id='nav-bar-mobile'>
-    <ul class="nav navbar-nav pull-right" >
-      <li class='menu'><%= link_to 'Home', root_path %></li>
-      <li class='menu'><%= link_to 'New Observation', new_observation_path %></li>
-      <li class='menu'><%= link_to 'All observations', observations_path %></li>
+    <ul class="nav navbar-nav pull-right nav-menu" >
+      <%= active_link_to 'Home', root_path, wrap_tag: :li, :active => :exclusive %>
+      <%= active_link_to 'New Observation', new_observation_path, wrap_tag: :li, :active => :exclusive  %>
+      <%= active_link_to 'All observations', observations_path, wrap_tag: :li, :active => :exclusive %>
       <%= render :partial => "shared/admin_login" if !user_signed_in? %>
       <%= render :partial => "shared/admin_nav" if user_signed_in? %>
     </ul>
