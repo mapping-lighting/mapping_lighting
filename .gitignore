@@ -18,3 +18,6 @@
 
 # Ignore IntelliJ IDE files
 .idea/
+
+# Ignore the built output of user manuals generation.
+doc/build/*
