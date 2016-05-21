@@ -8,17 +8,36 @@ Ruby version should be `2.2`, matching the AWS ElasticBeanstalk version (2.2 wit
 
 ## System dependencies
 
-- PostgreSQL
-- PostGIS
-- ImageMagick / GraphicsMagick
+- PostgreSQL - <http://www.postgresql.org>
+- PostGIS    - <http://postgis.net>
+- ImageMagick **OR** GraphicsMagick
+    - <https://www.imagemagick.org>
+    - <http://www.graphicsmagick.org>
+
+
+To build the documentation and user manuals you will also need;
+
+- Pandoc - <http://pandoc.org/>
+- PDFTex <https://www.tug.org/applications/pdftex/> \
+       On MacOSX PDFTex is available in MacTex - <https://tug.org/mactex/>
 
 You can install the required system packages on OSX using [Homebrew](http://brew.sh/), with the following command.
 
 ```shell
-brew install postgis imagemagick
+brew install postgis imagemagick pandoc
 ```
 
+
+
 > **Note:** PostgreSQL is a dependency of PostGIS, so will be installed automatically.
+
+### User Manuals Dependencies
+
+The additional dependencies can be installed on OSX with the Homebrew Cask plugin. <https://caskroom.github.io/>
+
+```shell
+brew cask install basictex
+```
 
 ## Configuration
 
