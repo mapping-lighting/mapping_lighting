@@ -277,11 +277,35 @@ a.button {
   -webkit-border-radius: 10px 10px;
   -moz-border-radius: 10px 10px;
 }
+
 a.button:hover, a.button:focus {
   color: $primary-background-color;
   background-color: $btn-color-hover;
   outline: none;
 }
+
+a.button-small {
+  font-size: 14px;
+  font: $font-sans-serif;
+  float: right;
+  background-color: $btn-color;
+  padding: 5px 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+  border-radius: 5px 5px;
+  border: 1px solid $primary-contrast-color-fade;
+  -webkit-border-radius: 5px 5px;
+  -moz-border-radius: 5px 5px;
+}
+
+a.button-small:hover, a.button-small:focus {
+  color: $primary-background-color;
+  background-color: $btn-color-hover;
+  outline: none;
+}
+
 h1 {
   float: left;
   font-family: Arial, Helvetica, sans-serif;

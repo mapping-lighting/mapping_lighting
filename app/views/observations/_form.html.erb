@@ -11,7 +11,8 @@
   <% end %>
   <div class='obs-form-title'>
     <h1>Record a Lighting Observation</h1>
-    <%= link_to 'Go Back', root_path, class: 'button' %>
+    <%= link_to 'Home', root_path, class: 'button-small' %>
+    <%= link_to 'All Observations', observations_path, class: 'button-small' %>
   </div>
   <div id="map" class="form-map" style="height:300px;"></div>
   <div class="obs-form-heading"><span class='title-span'>1</span>Take or upload a picture of your lighting observation</div>
@@ -94,7 +95,7 @@
       </figure>
     </div>
     <div class="actions" onclick="checkPermissionAndToggle('loading-gears');">
-      <%= f.submit "Upload" %>
+      <%= f.submit "Upload", id: 'upload-button'%>
     </div>
   </div>
 <% end %>
