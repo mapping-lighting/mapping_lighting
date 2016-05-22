@@ -1,7 +1,7 @@
 require 'carrierwave/orm/activerecord'
 
-# Don't attempt to upload to S3 on CI
-if ENV['CI']
+# Don't attempt to upload to S3 for tests.
+if ENV['CI'] || Rails.env.test?
   CarrierWave.configure do |config|
     config.storage = :file
     config.enable_processing = false
@@ -9,7 +9,8 @@ if ENV['CI']
 else
 
   CarrierWave.configure do |config|
-    config.fog_provider = 'fog/aws'                        # required
+    config.storage         = :fog
+    config.fog_provider    = 'fog/aws'                       # required
     config.fog_credentials = {
         provider:              'AWS',                        # required
         aws_access_key_id:     ENV['AWS_ACCESS_KEY_ID'],     # required
