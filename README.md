@@ -1,5 +1,7 @@
 # Mapping Lighting Application
 
+[![CircleCI](https://circleci.com/gh/mapping-lighting/mapping_lighting/tree/master.svg?style=svg)](https://circleci.com/gh/mapping-lighting/mapping_lighting/tree/master)
+
 # Setup
 
 ## Ruby version
