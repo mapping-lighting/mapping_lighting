@@ -21,3 +21,4 @@
 
 # Ignore the built output of user manuals generation.
 doc/build/*
+.DS_Store
