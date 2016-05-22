@@ -78,10 +78,24 @@ function toggleVisibility(id) {
   $('#'+id).toggle();
 }
 
+function showUploading(){
+  if (document.getElementById('upload-button'))
+    if (document.getElementById('upload-button').value == "Uploading") {
+      document.getElementById('upload-button').value = "Upload";
+      document.getElementById('upload-button').removeAttribute("class");
+    }
+    else{
+      document.getElementById('upload-button').value = "Uploading";
+      document.getElementById('upload-button').setAttribute("class", "btn disabled");
+    }
+}
+
 function checkPermissionAndToggle(id){
   if ($('input#observation_permission_given').is(':checked'))
+    showUploading()
     toggleVisibility(id);
 }
+
 
 function showExporting(id) {
   toggleVisibility(id);
@@ -92,11 +106,14 @@ $(document).ready(function(){
   closeAll('content');
 });
 
+object.onload=function(){showUploading()};
+
 $(function() {
   if($(window).width() <= 540) {
       try  {
           $("img").each(function() {
           $(this).attr("src", $(this).attr("src").replace("/images/how_do_i_start_wide.png", "/images/how_do_i_start.jpg"));
+          $(this).attr("src", $(this).attr("src").replace("/images/how_is_this_used_wide.png", "/images/how_is_this_used.png"));
       });
       } catch (e) {
           //YOLOL
