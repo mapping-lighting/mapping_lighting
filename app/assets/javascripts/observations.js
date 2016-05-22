@@ -90,6 +90,15 @@ function showUploading(){
     }
 }
 
+function hideUploading(){
+  if (document.getElementById('upload-button'))
+    if (document.getElementById('upload-button').value == "Uploading") {
+      document.getElementById('upload-button').value = "Upload";
+      document.getElementById('upload-button').removeAttribute("class");
+    }
+}
+
+
 function checkPermissionAndToggle(id){
   if ($('input#observation_permission_given').is(':checked'))
     showUploading()
@@ -106,7 +115,6 @@ $(document).ready(function(){
   closeAll('content');
 });
 
-object.onload=function(){showUploading()};
 
 $(function() {
   if($(window).width() <= 540) {
@@ -121,6 +129,12 @@ $(function() {
 
   }
 });
+
+$(document).ready(function(){
+  var uploading = document.getElementById('upload-button');
+  if (!uploading) { return; }
+  hideUploading();
+})
 
 $(document).ready(function(){
   var map = document.getElementById('map');
