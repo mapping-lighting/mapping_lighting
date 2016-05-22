@@ -1,5 +1,16 @@
 require 'carrierwave/orm/activerecord'
 
+# Don't attempt to upload to S3 on CI
+if ENV['CI']
+
+  Rails.env.test? or Rails.env.cucumber?
+  CarrierWave.configure do |config|
+    config.storage = :file
+    config.enable_processing = false
+  end
+
+else
+
 CarrierWave.configure do |config|
   config.fog_provider = 'fog/aws'                        # required
   config.fog_credentials = {
@@ -15,4 +26,5 @@ CarrierWave.configure do |config|
 
   config.fog_public     = true                                        # optional, defaults to true
   config.fog_attributes = { 'Cache-Control' => "max-age=#{365.day.to_i}" } # optional, defaults to {}
+end
 end

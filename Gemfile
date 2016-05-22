@@ -75,6 +75,10 @@ group :development, :test do
   gem 'byebug'
   # Pry as default console and or to open the execution and debug.
   gem 'pry'
+  gem 'turnip'
+  gem 'rspec-rails', '~> 3.4'
+  gem 'capybara'
+  gem 'poltergeist'
 end
 
 group :development do

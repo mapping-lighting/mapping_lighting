@@ -1,5 +1,7 @@
 # Mapping Lighting Application
 
+[![CircleCI](https://circleci.com/gh/mapping-lighting/mapping_lighting/tree/master.svg?style=svg)](https://circleci.com/gh/mapping-lighting/mapping_lighting/tree/master)
+
 # Setup
 
 ## Ruby version
@@ -14,6 +16,11 @@ Ruby version should be `2.2`, matching the AWS ElasticBeanstalk version (2.2 wit
     - <https://www.imagemagick.org>
     - <http://www.graphicsmagick.org>
 
+### Development Dependencies
+
+For development and testing you will need PhantomJS.
+
+- PhantomJS - <http://phantomjs.org/>
 
 To build the documentation and user manuals you will also need;
 
@@ -21,10 +28,10 @@ To build the documentation and user manuals you will also need;
 - PDFTex <https://www.tug.org/applications/pdftex/> \
        On MacOSX PDFTex is available in MacTex - <https://tug.org/mactex/>
 
-You can install the required system packages on OSX using [Homebrew](http://brew.sh/), with the following command.
+You can install all the required system packages on OSX using [Homebrew](http://brew.sh/), with the following command.
 
 ```shell
-brew install postgis imagemagick pandoc
+brew install postgis imagemagick pandoc phantomjs
 ```
 
 
