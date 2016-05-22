@@ -107,24 +107,34 @@ $(function() {
 
 $(document).ready(function(){
   var map = document.getElementById('map');
-  if(!map) return;
-  //$('#observation_attachment').change(imageChange);
+  if(!map) { return; }
+
   initMap();
 
   initMarkers();
 
-  document.getElementById("observation_attachment").onchange = function(e) {
-      getLocation();
-      if (e.target.files[0]) {
-      EXIF.getData(e.target.files[0], function() {
-          //console.dir(EXIF.pretty(this));
-          console.dir(this.exifdata);
-          setExifData(this.exifdata);
 
-      });
-      //previewImage(this);
-      } else {
-        console.log('No file selected');
-      }
-  };
+});
+
+
+$(document).ready(function(){
+    var attachment_upload = document.getElementById("observation_attachment");
+
+    if (!attachment_upload) { return; }
+
+    attachment_upload.onchange = function(e) {
+        getLocation();
+        if (e.target.files[0]) {
+            EXIF.getData(e.target.files[0], function() {
+                //console.dir(EXIF.pretty(this));
+                console.dir(this.exifdata);
+                setExifData(this.exifdata);
+
+            });
+            //previewImage(this);
+        } else {
+            console.log('No file selected');
+        }
+    };
+
 });
