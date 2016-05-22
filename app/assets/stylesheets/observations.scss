@@ -248,7 +248,7 @@ $label-color: #888;
   margin-bottom: 20px;
 }
 
-#how-do-I-start {
+#how-do-I-start, #how-is-this-used {
   border: 2px solid $mobile-warmth-dark-grey;
 }
 
@@ -523,17 +523,17 @@ body > div.container-fluid > div > div.well > div > div.col-md-4 > a > button
 }
 
 .panel-body {
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+  justify-contents: space-between;
 }
 
-// body > div.container-fluid > div > div.row > div:nth-child(2) > div > div.panel-body > a,
-// body > div.container-fluid > div > div.row > div:nth-child(1) > div > div.panel-body > a > button,
-// body > div.container-fluid > div > div.row > div:nth-child(3) > div > div.panel-body > a {
-
-//   align-self: flex-end;
-// }
+.panel-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 .flex-outer {
   display: flex;
@@ -561,8 +561,4 @@ figure#loading-gears {
 
 #gears {
   margin-left: 20px;
-}
-
-* {
-  border: 1px solid red;
 }
