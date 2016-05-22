@@ -97,6 +97,7 @@ $(function() {
       try  {
           $("img").each(function() {
           $(this).attr("src", $(this).attr("src").replace("/images/how_do_i_start_wide.png", "/images/how_do_i_start.jpg"));
+          $(this).attr("src", $(this).attr("src").replace("/images/how_is_this_used_wide.png", "/images/how_is_this_used.png"));
       });
       } catch (e) {
           //YOLOL
