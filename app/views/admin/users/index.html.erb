@@ -1,0 +1,12 @@
+<div class='observation-grid' id='manage-observations'>
+  <div id="filters-overview">
+    <h4>User filters:</h4>
+  </div>
+  <%= datagrid_form_for @users_grid, :method => :get, :url => admin_users_path %>
+  <div>
+    <%=link_to "Create new user", new_admin_user_path, method: :get, class: 'button'  %>
+  </div>
+  <%= paginate(@users_grid.assets) %>
+  <%= datagrid_table  @users_grid %>
+  <%= paginate(@users_grid.assets) %>
+</div>

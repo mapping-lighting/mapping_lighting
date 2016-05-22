@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+
   resources :observations, except: [:edit, :update, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -10,7 +10,13 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :observations, only: [:index, :destroy, :statistics]
+    resources :users
   end
+
+  scope 'admin' do
+    devise_for :users
+  end
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
