@@ -7,6 +7,9 @@ file '.env' do |task|
   export MAPPING_LIGHTING_DATABASE_USERNAME=postgres
   export MAPPING_LIGHTING_DATABASE_PASSWORD=
 
+  # Enforce local links for development
+  export PUBLIC_HOSTNAME=localhost:3000
+
   # AWS S3 Credentials and Bucket Name, for image uploads.
   # Production bucket is '2016-mapping-lighting'
   export AWS_ACCESS_KEY_ID=
