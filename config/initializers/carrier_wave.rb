@@ -1,5 +1,10 @@
 require 'carrierwave/orm/activerecord'
 
+# See https://github.com/fog/fog/issues/3429 - uninitialized constant CarrierWave::Storage::Fog (NameError)
+require 'carrierwave/storage/abstract'
+require 'carrierwave/storage/file'
+require 'carrierwave/storage/fog'
+
 # Don't attempt to upload to S3 for tests.
 if ENV['CI'] || Rails.env.test?
   CarrierWave.configure do |config|
