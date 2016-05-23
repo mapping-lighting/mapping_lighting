@@ -38,6 +38,7 @@ As such the following environment variables are used to provide the application 
 
 ```shell
 DATABASE_URL
+PUBLIC_HOSTNAME
 AWS_ACCESS_KEY_ID
 AWS_SECRET_ACCESS_KEY
 AWS_S3_BUCKET_NAME
@@ -47,6 +48,11 @@ AWS_S3_BUCKET_NAME
 
   : PostgreSQL connection URL including host, username, database and password. \
     **e.g.** `postgis://username:password@example.com/database_name`
+
+`PUBLIC_HOSTNAME`
+
+  : The domain / hostname at which the application is publicly visible.
+  : If not configured, will fallback to `mapping-lighting.org` in production.
 
 `AWS_S3_BUCKET_NAME`
 
@@ -74,6 +80,7 @@ We recommend the use of [AWS Identity and Access Management (IAM)](https://docs.
 | Configuration Key       | Example Value                                           |
 |-------------------------|---------------------------------------------------------|
 | `DATABASE_URL`          | `postgis://username:password@example.com/database_name` |
+| `PUBLIC_HOSTNAME`       | `mapping-lighting.org`                                  |
 | `AWS_S3_BUCKET_NAME`    | `mapping-lighting-bucket-name`                          |
 | `AWS_ACCESS_KEY_ID`     | `AKF9023LKJSDF90DSLFF`                                  |
 | `AWS_SECRET_ACCESS_KEY` | `66819a95fed1aaf5445a0792c328e124`                      |

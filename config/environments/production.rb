@@ -76,4 +76,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Only used as fallback, configure with Environment Var PUBLIC_HOSTNAME
+  config.fallback_public_hostname = 'mapping-lighting.org'
 end
