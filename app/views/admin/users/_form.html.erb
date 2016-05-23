@@ -1,0 +1,32 @@
+<div>
+  <div class='obs-form-title'>
+    <h1>Create a new user</h1>
+    <%= link_to "Cancel", admin_users_path, class: 'button' %>
+  </div>
+
+  <%= form_for @user, url: admin_users_path(@user) do |f| %>
+    <fieldset>
+      <ol>
+        <li class="required">
+          <%= f.label :email %>
+          <%= f.email_field :email, size: 40 %>
+        </li>
+        <li class="required">
+          <%= f.label :password %>
+          <%= f.password_field :password, size: 40 %>
+        </li>
+        <li class="required">
+          <%= f.label :password_confirmation, "Confirm Password" %>
+          <%= f.password_field :password_confirmation, size: 40 %>
+        </li>
+      </ol>
+      <p>
+        <% if @user.new_record? %>
+          <%= f.submit "Create new user" %>
+        <% else %>
+          <%= f.submit "Update User" %>
+        <% end %>
+      </p>
+    </fieldset>
+  <% end %>
+</div>

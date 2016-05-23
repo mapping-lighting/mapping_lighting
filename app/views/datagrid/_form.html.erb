@@ -1,7 +1,7 @@
 <%= form_for grid, options do |f| -%>
   <div class='filter-container'>
     <% grid.filters.each do |filter| %>
-      <div class="datagrid-filter filter">
+      <div class="datagrid-filter filter" id="<%= filter.options[:id]%>">
         <div class='filter-label'>
           <%= f.datagrid_label filter %>
         </div>

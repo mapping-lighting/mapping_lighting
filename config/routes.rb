@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users
   resources :observations, except: [:edit, :update, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
@@ -10,6 +11,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :observations, only: [:index, :destroy, :statistics]
+    resources :users
   end
 
   # Example of regular route:
