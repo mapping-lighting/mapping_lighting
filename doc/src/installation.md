@@ -1,6 +1,6 @@
 ---
 title: Mapping Lighting Installation Guide
-subtitle: Installation, Administration and User and Observation Management
+subtitle: Installation and service setup
 author:
   - mapping-lighting.org Capstone Project 2016
 ---
