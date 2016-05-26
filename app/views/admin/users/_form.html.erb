@@ -1,0 +1,42 @@
+<div class='new_observation'>
+  <div class='obs-form-title'>
+    <h1>Create a new user</h1>
+    <%= link_to "Cancel", admin_users_path, class: 'button' %>
+  </div>
+
+  <%= form_for @user, url: admin_users_path(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this observation from being saved:</h2>
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <fieldset>
+      <ol>
+        <li class="required">
+          <%= f.label :email %>
+          <%= f.email_field :email, size: 40 %>
+        </li>
+        <li class="required">
+          <%= f.label :password %>
+          <%= f.password_field :password, size: 40 %>
+        </li>
+        <li class="required">
+          <%= f.label :password_confirmation, "Confirm Password" %>
+          <%= f.password_field :password_confirmation, size: 40 %>
+        </li>
+      </ol>
+      <p>
+        <% if @user.new_record? %>
+          <%= f.submit "Create new user" %>
+        <% else %>
+          <%= f.submit "Update User" %>
+        <% end %>
+      </p>
+    </fieldset>
+  <% end %>
+</div>

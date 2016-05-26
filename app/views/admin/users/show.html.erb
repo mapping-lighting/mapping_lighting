@@ -1,0 +1,54 @@
+<div class='new_observation'>
+  <div class='obs-form-title'>
+    <h1>Current user details</h1>
+    <%= link_to 'Create user', new_admin_user_path, class: 'button' %>
+    <%= link_to 'Manage users', admin_users_path, class: 'button' %>
+  </div>
+  <div class="flex-outer">
+    <span class='flex-right'>
+        <strong>ID:</strong>
+        <%= @user.id %>
+      </p>
+      <p>
+        <strong>Email:</strong>
+        <%= @user.email %>
+      </p>
+
+      <p>
+        <strong>Created at:</strong>
+        <%= @user.created_at %>
+      </p>
+      <p>
+        <strong>Updated at:</strong>
+        <%= @user.created_at %>
+      </p>
+      <p>
+        <strong>Created at:</strong>
+        <%= @user.updated_at %>
+      </p>
+      <p>
+        <strong>Reset password sent at:</strong>
+        <%= @user.reset_password_sent_at %>
+      </p>
+      <p>
+        <strong>Sign in count:</strong>
+        <%= @user.sign_in_count %>
+      </p>
+      <p>
+        <strong>Current sign in at:</strong>
+        <%= @user.current_sign_in_at %>
+      </p>
+      <p>
+        <strong>Last sign in at:</strong>
+        <%= @user.last_sign_in_at %>
+      </p>
+      <p>
+        <strong>Current sign in IP:</strong>
+        <%= @user.current_sign_in_ip %>
+      </p>
+      <p>
+        <strong>Last sign in IP:</strong>
+        <%= @user.last_sign_in_ip %>
+      </p>
+  </div>
+</div>
