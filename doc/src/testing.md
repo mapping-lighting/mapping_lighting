@@ -55,7 +55,7 @@ The acceptance tests are written in the [Gherkin specification language](https:/
 
 ## Separation of Intent from Implementation.
 
-Gherkin is design to be a human readable format for specifying behaviour, but that is still machine executable.
+Gherkin is designed to be a human readable format for specifying behaviour, but that is still machine executable.
 This allows the writing of tests which define the business or domain goal, without specifying the low level implementation.
 
 The following example uses user facing language in the specification, and detail oriented code in the definition of *how* the tests will be run.
@@ -92,6 +92,8 @@ In this example, the step takes two parameters, the email and password, and then
 4. Clicking the "Log in" button.
 
 This system allows the testing to be completed automatically by the computer, rather than manually by a person.
+
+For full details of the automated tests, see the acceptance specs on github: [MappingLighting /spec/acceptance](https://github.com/mapping-lighting/mapping_lighting/tree/master/spec/acceptance).
 
 # Use of Manual Testing
 
