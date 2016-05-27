@@ -1,61 +1,34 @@
-# require 'pandoc-ruby'
-
 require 'rake/clean'
-CLEAN.include(Rake::FileList['doc/build/*'])
 
+
+MANUAL_FORMAT = 'docx'
+# MANUAL_FORMAT = 'html'
+CLEAN.include(Rake::FileList["doc/build/*.#{MANUAL_FORMAT}"])
+
+# For each markdown file in the doc/src directory a corresponding word document will be generated.
 namespace :doc do
   desc 'Generate All Documentation Manuals'
-  task :manuals => [
-      :clean,
-      "Installation Manual",
-  ]
-
-  task "Installation Manual"  do |t|
-
-    filenames = ['doc/src/installation.md']
-    docname = 'doc/build/Installation.pdf'
-
-    # pandoc
-    #
-    # --number-sections
-    # --template=mytemplate.tex \
-    # --variable mainfont="Palatino"  \
-    # --variable sansfont="Century Gothic" \
-    # --variable monofont="Consolas" \
-    # --variable fontsize=12pt \
-    # --variable version=1.15.2 \
-    # README
-    # --latex-engine=xelatex \
-    # --toc \
-    # --output #{docname}
-    # --variable mainfont=\"Palatino\"  \
-    #   --variable sansfont=\"Century Gothic\" \
-    #   --variable monofont=\"Menlo\"
+  task :manuals => [:clean, :generated_manuals]
 
 
-    #current_version = %x(git show -s --format="%h - %ci" 2>&1).chomp
-    current_version = %x(git show -s --format="%h" 2>&1).chomp
-    
-    
 
+  MANUAL_FILES = Rake::FileList.new('doc/src/*.md', 'doc/src/*.markdown')
+  OUTPUT_FILES = MANUAL_FILES.pathmap("%{/src/,/build/}X.#{MANUAL_FORMAT}").zip(MANUAL_FILES).to_h
 
+  task :generated_manuals => OUTPUT_FILES.keys
+
+  def document_source_file(fname)
+    OUTPUT_FILES.fetch(fname) { binding.pry }
+  end
+
+  rule ".#{MANUAL_FORMAT}" => ->(f) { document_source_file(f) } do |t|
     pandoc_command = "pandoc \
-      --template=mytemplate2.tex \
-      --number-sections \
-      --variable fontsize=12pt \
-      --variable monofont=Menlo \
-      --variable version=#{current_version} \
       --self-contained \
       --standalone \
-      --output #{docname} \
+      --output #{t.name} \
       --toc \
-        #{filenames.join(" ")}"
+    #{t.source}"
 
     sh pandoc_command
-
-    sh "open #{docname}"
   end
 end
-
-
-# pandoc --template=mytemplate.tex --number-sections --variable fontsize=12pt --self-contained --standalone --output doc/build/Installation.pdf --toc   doc/src/installation.md

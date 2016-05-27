@@ -25,8 +25,6 @@ For development and testing you will need PhantomJS.
 To build the documentation and user manuals you will also need;
 
 - Pandoc - <http://pandoc.org/>
-- PDFTex <https://www.tug.org/applications/pdftex/> \
-       On MacOSX PDFTex is available in MacTex - <https://tug.org/mactex/>
 
 You can install all the required system packages on OSX using [Homebrew](http://brew.sh/), with the following command.
 
@@ -34,17 +32,8 @@ You can install all the required system packages on OSX using [Homebrew](http://
 brew install postgis imagemagick pandoc phantomjs
 ```
 
-
-
 > **Note:** PostgreSQL is a dependency of PostGIS, so will be installed automatically.
 
-### User Manuals Dependencies
-
-The additional dependencies can be installed on OSX with the Homebrew Cask plugin. <https://caskroom.github.io/>
-
-```shell
-brew cask install basictex
-```
 
 ## Configuration
 
