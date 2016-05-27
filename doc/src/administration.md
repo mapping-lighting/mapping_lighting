@@ -2,7 +2,7 @@
 title: Mapping Lighting Administration Guide
 subtitle: Administration, User and Observation Management
 author:
-  - mapping-lighting.org Capstone Project 2016
+  - mapping-lighting.org Professional Project 2016
 ---
 
 

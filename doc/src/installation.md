@@ -2,7 +2,7 @@
 title: Mapping Lighting Installation Guide
 subtitle: Installation and service setup
 author:
-  - mapping-lighting.org Capstone Project 2016
+  - mapping-lighting.org Professional Project 2016
 ---
 
 # Introduction
